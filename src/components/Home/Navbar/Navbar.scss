@@ -44,6 +44,11 @@
 .hamburger{
     float: right;
     position: absolute;
+    top: 45px;
+    width: 30px;
+    height: 20px;
+    opacity: 1 !important;
+    right: 40px;
 
     &black{
         .hamburger_part{
@@ -56,7 +61,18 @@
         width:30px;
         height: $hamburgerPartHeight;
         position: absolute;
+        background: $blue;
         right: 0;
+
+        @for $i from 1 through 3 {
+            &:nth-of-type(#{$i}){
+                top: ($hamburgerPartHeight + 2) * 2 * ($i - 1)
+            }
+        }
+
+        &:last-child {
+            width: 20px;
+        }
 
     }
 }
@@ -72,12 +88,12 @@
 
     ul{
         list-style: none;
-        display: flex;
         margin: 0;
         padding:0;
 
         li{
             margin-right: 10px;
+            display: inline;
 
             &.active{
                 font-size: 20px;

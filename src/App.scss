@@ -1,0 +1,22 @@
+@font-face{
+    font-family: 'Hurme';
+    src: url('./components/styles/fonts/HurmeGeometricSans2-Bold.woff2') format('woff2'),
+        url('./components/styles/fonts/HurmeGeometricSans2-Bold.woff') format('woff');
+        font-weight: bold;
+        font-style: normal;
+}
+
+$blue: #07101d;
+$yellow: #ffdc25;
+$globalPadding: 40px;
+
+
+body{
+    background: $yellow;
+    font-family: 'Hurme';
+    font-weight: 500;
+    user-select: none;
+    margin: 0;
+    padding: $globalPadding;
+    height: 100vh;
+}

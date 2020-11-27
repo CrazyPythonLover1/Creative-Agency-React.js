@@ -1,17 +1,6 @@
 @import "../../styles/variables";
 // $yellow: #ffdc25;
 
-// body{
-//     background: $yellow;
-//     font-family: 'Hurme';
-    
-// }
-
-// .portfolio_home__header{
-//     float: right;
-//     width: 100%;
-// }
-
 
 .logoMain{
     float: left;
@@ -92,7 +81,7 @@
         padding:0;
 
         li{
-            margin-right: 10px;
+            margin-right: 15px;
             display: inline;
 
             &.active{

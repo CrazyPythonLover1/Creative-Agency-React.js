@@ -1,14 +1,15 @@
 import React from 'react';
+import './Sliders.scss';
 import worksData from '../../../data/works.json';
-import Slider from './Slider/Slider';
+import Slide from './Slide/Slide';
 
 const Sliders = () => {
     const works = worksData.works;
-    console.log(works)
+   
     return (
-        <div>
+        <div id="sliders" >
             {
-                works.map(work => <Slider works={works}/>)
+                works.map(work => <Slide key={`slide-${work.id}`} work={work}/>)
             }
         </div>
     );

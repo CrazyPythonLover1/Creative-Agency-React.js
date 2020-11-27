@@ -3,7 +3,7 @@ import "./Navbar.scss";
 
 const Navbar = () => {
   return (
-    <div style={{position:" relative"}} >
+    <div>
       <div className="page_portfolio" >
         <div className="portfolio_home__header">
           <div className="logoMain">

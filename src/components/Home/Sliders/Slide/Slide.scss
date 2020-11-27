@@ -1,0 +1,19 @@
+#slide{
+    width: 700px;
+    height: 450px;
+    margin: 0 auto;
+    padding-right: 40px;
+
+    .title{
+        font-weight: 800;
+        font-size: 22px;
+        margin-bottom: 10px;
+        color: #060608;
+        transform-style: preserve-3d;
+    }
+
+    img{
+        width: 100% !important;
+        
+    }
+}

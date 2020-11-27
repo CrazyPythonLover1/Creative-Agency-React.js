@@ -3,6 +3,7 @@ import Navbar from './Navbar/Navbar';
 import Sliders from './Sliders/Sliders';
 
 const Home = () => {
+    
     return (
         <div>
             <Navbar/>

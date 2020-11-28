@@ -10,14 +10,16 @@ function App() {
 
 
 
-useEffect( () => {
-  window.addEventListener('mousemove', dynamicCursor );
-  return () => window.removeEventListener('mousemove', dynamicCursor);
-} )
+// useEffect( () => {
+//   window.addEventListener('mousemove', dynamicCursor );
+//   return () => window.removeEventListener('mousemove', dynamicCursor);
+// }, [] )
   return (
     <div style={{ }}>
-      <div className="dynamicCursor" style={{position:"fixed", transform: `translateX(calc(${cursor.x}px - 50%)) translateY(calc(${cursor.y}px - 50%))` }} ></div>
+      
       <Home/>
+      <div className="dynamicCursor" style={{position:"fixed", transform: `translateX(calc(${cursor.x}px - 50%)) translateY(calc(${cursor.y}px - 50%))`, opacity:cursor.x?1:0 }} ></div>
+
     </div>
     
   );

@@ -30,10 +30,58 @@
 
     .img{
         width: 100%;
-        position: relative;
+        position: relative !important;
         height: 100% !important;
         img{
             width: 100% !important;
+        }
+
+        .overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0b121bb3;
+            transition: all 0.2s ease 0s;
+    
+            .category{
+                color: #ffdc25;
+                font-weight: 700;
+                font-size: 12px;
+                text-transform: uppercase;
+                padding: 94px 0 0 94px;
+            }
+    
+            .title{
+                color: white;
+                font-weight: 800;
+                font-size: 28px;
+                width: 350px;
+                margin: 22px 0 16px 0;
+                padding: 0 0 0 94px;
+            }
+
+            .button{
+                color: #07101d;
+                width: 170px;
+                font-size: 14px;
+                cursor: pointer;
+                margin-top: 14px;
+                background: #ffdc25;
+                padding: 12px 0px 12px 20px;
+                display: flex;
+                margin: 30px 0 0 94px;
+
+                span{
+                    margin-right: 10px;
+                }
+
+                .MuiSvgIcon-root{
+                    width: 18px;
+                    height: auto;
+                }
+            }
         }
     }
 

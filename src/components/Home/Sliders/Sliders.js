@@ -6,10 +6,11 @@ import worksData from "../../../data/works.json";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+
 const Sliders = () => {
   const works = worksData.works;
 
-  
 
   return (
     <div id="sliders" className="sliders">
@@ -25,9 +26,14 @@ const Sliders = () => {
                 </div>
                 <div className="img">
                   <img src={work.src} alt="" />
+
                   <div className="overlay">
                     <div className="category"> {work.category} </div>
+                    <div className="title"> {work.productTitle} </div>
+                    <div className="button"> <span>View case study</span> <ArrowForwardIcon/>
+                    </div>
                   </div>
+
                 </div>
               </div>
             </SwiperSlide>

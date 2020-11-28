@@ -10,10 +10,10 @@ function App() {
 
 
 
-// useEffect( () => {
-//   window.addEventListener('mousemove', dynamicCursor );
-//   return () => window.removeEventListener('mousemove', dynamicCursor);
-// }, [] )
+useEffect( () => {
+  window.addEventListener('mousemove', dynamicCursor );
+  return () => window.removeEventListener('mousemove', dynamicCursor);
+}, [] )
   return (
     <div style={{ }}>
       

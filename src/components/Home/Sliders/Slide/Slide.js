@@ -1,6 +1,7 @@
 import React from 'react';
 import './Slide.scss';
 
+
 const Slide = ({work}) => {
     return (
         <div id="slide" >

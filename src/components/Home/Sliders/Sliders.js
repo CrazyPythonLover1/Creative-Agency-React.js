@@ -28,9 +28,11 @@ const Sliders = () => {
   }
   // console.log(activeOverlay)
 
-  const [isRotate, setIsRotate] = useState(false)
+  // const [isRotate, setIsRotate] = useState(false)
+  const [dragging, setDragging] = useState(false)
+
   function drawMouseSpeedDemo() {
-    var mrefreshinterval = 30; // update display every 500ms
+    var mrefreshinterval = 10; // update display every 500ms
     var lastmousex=-1; 
     var lastmousey=-1;
     var lastmousetime;
@@ -39,7 +41,9 @@ const Sliders = () => {
     var mpoints_max = 30;
     var direction;
 
-    $('html')?.mousemove(function(e) {
+
+
+    $('html').mousemove(function(e) {
         var mousex = e.pageX;
         var mousey = e.pageY;
         if (lastmousex > -1) {
@@ -61,20 +65,22 @@ const Sliders = () => {
     var mdraw = function() {
         var md = new Date();
         var timenow = md.getTime();
-        if (lastmousetime && lastmousetime!=timenow) {
+        if (lastmousetime && lastmousetime!==timenow) {
             var pps = Math.round(mousetravel / (timenow - lastmousetime) * 1000);
             mpoints.push(pps);
+            console.log(pps)
             if (mpoints.length > mpoints_max)
                 mpoints.splice(0,1);
             mousetravel = 0;
             //console.log(pps)
-            if(isRotate) {
+            if(dragging) {
                 let velocity = .5 - (pps / 40000);
 
 
 
-                $('.slide')?.css('transform', 'rotateY(' + direction + pps / 110 + 'deg) scale(1)')
-                $('.slide')?.css('transition', 'all ' + velocity + 's');
+                $('.swiper-slide')?.css('transform', 'rotateY(' + direction + pps / 40  + 'deg) scale(1)')
+                console.log(direction + pps / 110 )
+                $('.swiper-slide')?.css('transition', 'all ' + velocity + 's');
                 //console.log(velocity)
             }
 
@@ -86,7 +92,9 @@ const Sliders = () => {
     setTimeout(mdraw, mrefreshinterval); 
 };
 
-drawMouseSpeedDemo()
+drawMouseSpeedDemo();
+
+
 
   return (
     <div id="sliders" className="sliders">
@@ -96,15 +104,34 @@ drawMouseSpeedDemo()
           slidesPerView="auto" 
           centeredSlides="true" 
           spaceBetween={60}
-          onSlideChange={() => drawMouseSpeedDemo()}
+          onSlideChange={() => {
+            setDragging(true)
+            drawMouseSpeedDemo()
+          }}
+          // onTouchMove={() => {
+          //   setDragging(true) 
+          //   drawMouseSpeedDemo()
+          // } }
+          // onTouchStart={() => {
+          //   setDragging(true) 
+          //   drawMouseSpeedDemo()
+          // } }
+          onClick={() => {
+            setDragging(true) 
+            drawMouseSpeedDemo()
+          }}
+          onSetTranslate={() => {
+            setDragging(true) 
+            drawMouseSpeedDemo()
+          }}
           // onSliderMove ={ () => setIsRotate( true)}
           // onSlideNextTransitionEnd={ () => setIsRotate( true)}
        
 
         >
           {works.map((work) => (
-            <SwiperSlide key={`slider-${work.id}`}>
-              <div id="slide" className="slide">
+            <SwiperSlide key={`slider-${work.id}`} >
+              <div id="slide" className="slide" >
                 <div className="title">
                   .0{work.id} <br/>
                   {work.title}

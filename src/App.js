@@ -9,7 +9,6 @@ function App() {
 );
 
 
-
 useEffect( () => {
   window.addEventListener('mousemove', dynamicCursor );
   return () => window.removeEventListener('mousemove', dynamicCursor);

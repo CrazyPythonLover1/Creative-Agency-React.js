@@ -1,18 +1,43 @@
 import React, { useEffect, useState } from "react";
 import "./Sliders.scss";
 import worksData from "../../../data/works.json";
-import $ from 'jquery'
+import Slide from "./Slide/Slide";
 
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
-import { CodeSharp } from "@material-ui/icons";
+import Navbar from "../Navbar/Navbar";
+
+
 
 const Sliders = () => {
+
   const works = worksData.works;
-   // const [isRotate, setIsRotate] = useState(false)
+   const [isRotate, setIsRotate] = useState({})
+
+  //  console.log(isRotate.startX)
+
+   const [rotate, setRotate] = useState(0)
+   useEffect(() => {
+    if (isRotate.diff> 40){
+      console.log(isRotate.diff)
+      setRotate(40);
+      // console.log(rotate)
+      
+    } else if( isRotate.startX> isRotate.currentX){
+      setRotate(-40);
+      // console.log(rotate)
+    } else{
+      setRotate(isRotate.diff)
+    }
+
+    setTimeout(() => {
+      setRotate(0)
+    }, 700)
+   }, [isRotate.diff])
+
 
   const activeSlide = document.querySelector('.swiper-slide-active');
   const next = document.querySelector('.swiper-slide-next');
@@ -32,96 +57,60 @@ const Sliders = () => {
  
   const [dragging, setDragging] = useState(false)
 
-  function drawMouseSpeedDemo() {
-    var mrefreshinterval = 10; // update display every 500ms
-    var lastmousex=-1; 
-    var lastmousey=-1;
-    var lastmousetime;
-    var mousetravel = 0;
-    var mpoints = [];
-    var mpoints_max = 30;
-    var direction;
+  const [individualSlide, setIndividualSlide] = useState(false);
+  const [slideItem, setSlideItem] = useState({})
 
+ const handleBtn = (work) => {
+  setIndividualSlide(true)
+  setSlideItem(work)
+ }
 
-
-    $('html').mousemove(function(e) {
-        var mousex = e.pageX;
-        var mousey = e.pageY;
-        if (lastmousex > -1) {
-            mousetravel += Math.max( Math.abs(mousex-lastmousex), Math.abs(mousey-lastmousey) );
-        }
-        // console.log(mousex-lastmousex)
-
-        if(mousex-lastmousex > 0) {
-            direction = '+'
-        } else {
-            direction = '-'
-        }
-
-        //console.log(direction);
-
-        lastmousex = mousex;
-        lastmousey = mousey;
-    });
-    var mdraw = function() {
-        var md = new Date();
-        var timenow = md.getTime();
-        if (lastmousetime && lastmousetime!==timenow) {
-            var pps = Math.round(mousetravel / (timenow - lastmousetime) * 1000);
-            mpoints.push(pps);
-            console.log(pps)
-            if (mpoints.length > mpoints_max)
-                mpoints.splice(0,1);
-            mousetravel = 0;
-            //console.log(pps)
-            if(dragging) {
-                let velocity = .5 - (pps / 40000);
-
-
-
-                $('.swiper-slide')?.css('transform', 'rotateY(' + direction + pps / 40  + 'deg) scale(1.03)')
-                console.log(direction + pps / 110 )
-                $('.swiper-slide')?.css('transition', 'all ' + velocity + 's');
-                //console.log(velocity)
-            }
-
-        }
-        lastmousetime = timenow;
-        setTimeout(mdraw, mrefreshinterval);
-    }
-    // We could use setInterval instead, but I prefer to do it this way
-    setTimeout(mdraw, mrefreshinterval); 
-};
-
-// drawMouseSpeedDemo();
-
-
+ console.log(slideItem);
 
   return (
+    <div className={`container  ${individualSlide?"expand":""} `}   >
+      {/* <div style={{opacity:individualSlide?1:0}}> <Navbar/> </div>  */}
     <div id="sliders" className="sliders">
       <div className="inner-slider">
        
         <Swiper 
           slidesPerView="auto" 
-          centeredSlides="true" 
+          centeredSlides="true"
           speed={1000}
           initialSlide={1}
+          preventInteractionOnTransition={individualSlide?true:false}
+          allowSlidePrev={individualSlide?false:true}
+          allowSlideNext={individualSlide?false:true}
+          // touchStartPreventDefault="false"
+          
           onSlideChange={() => {
             setDragging(true)
-            drawMouseSpeedDemo()
+            // drawMouseSpeedDemo()
+            console.log("slide change")
+            setRotate(20);
           }}
-          // onTouchMove={() => {
-          //   setDragging(true) 
-          //   drawMouseSpeedDemo()
-          // } }
-          // onTouchStart={() => {
-          //   setDragging(true) 
-          //   drawMouseSpeedDemo()
-          // } }
+          onTouchMove={(e) => {
+            setDragging(!dragging) 
+            // drawMouseSpeedDemo(e)
+            // console.log(e.touches.startX)
+            // console.log("Touch Move ")
+            !individualSlide && setIsRotate({startX:e.touches.startX, currentX:e.touches.currentX, diff:e.touches.diff})
+
+          } }
+          
+          onTouchStart={() => {
+            setDragging(true) 
+            // drawMouseSpeedDemo()
+            // console.log("Touch Start")
+
+          } }
           onClick={() => {
             setDragging(true) 
-            drawMouseSpeedDemo()
+            // drawMouseSpeedDemo()
+            // console.log(" Click ")
+
           }}
+ 
 
           // onSetTranslate={() => {
           //   setDragging(true) 
@@ -132,29 +121,40 @@ const Sliders = () => {
        
 
         >
+          {/*  */}
           {works.map((work) => (
-            <SwiperSlide key={`slider-${work.id}`} >
-              <div id="slide" className="slide" >
+            <SwiperSlide key={`slider-${work.id}`} style={{transform:`rotateY(${individualSlide?"":rotate}deg) scaleX(${rotate>20?1.1:1}) `}}   >
+              <div id="slide" className="slide"   >
+                 
                 <div className="title">
                   .0{work.id} <br/>
                   {work.title}
                 </div>
-                <div className="img">
-                  <img src={work.src} alt="" />
+                <div className="img" >
+                  <img src={work.src} alt=""   />
 
-                  <div className="overlay" style={{opacity:activeSlide?1:0}}>
+                  <div className="overlay" style={{opacity:activeSlide?1:0 }} >
                     <div className="category"> {work.category} </div>
                     <div className="title"> {work.productTitle} </div>
-                    <div className="button"> <span>View case study</span> <ArrowForwardIcon/>
+                    <div className="button" onClick={() => handleBtn(work)}> <span>View case study</span> <ArrowForwardIcon/>
+                   
                     </div>
                   </div>
 
                 </div>
+                { individualSlide && <div  >
+      {/* { <Slide slideItem={slideItem}/> } */}
+      </div>}
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
+        
       </div>
+      
+    </div>
+
+     
     </div>
   );
 };

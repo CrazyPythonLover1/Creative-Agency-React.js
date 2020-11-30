@@ -5,14 +5,17 @@ import Home from './components/Home/Home';
 function App() {
   const [cursor, setCursor] = useState({x:null, y: null})
   const dynamicCursor = e => (
-    setCursor({x:e.clientX, y:e.clientY})
+    
+    setCursor({x:e.clientX, y:e.clientY, pageX:e.pageX})
+    
 );
 
-
+// console.log(cursor.pageX)
 useEffect( () => {
   window.addEventListener('mousemove', dynamicCursor );
   return () => window.removeEventListener('mousemove', dynamicCursor);
 }, [] )
+
   return (
     <div style={{ }}>
       

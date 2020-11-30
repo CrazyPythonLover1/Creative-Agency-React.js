@@ -1,18 +1,22 @@
+#sliders{
+    position: relative;
+    top: 128px;
+}
 
 .swiper-container{
     margin: 0  !important;
     width: 100%;
-    top: 140px;
+    padding-top: 20px !important;
 }
 
 .swiper-wrapper{
-    transition: all .5s ease 0s !important;
+    // transition: all .5s ease 0s !important;
     animation: 0s ease 0s 1 normal none running none;
 }
 
 .swiper-slide{
     width: 700px !important;
-    
+    margin-right: 60px ;
 
     
 }
@@ -23,6 +27,7 @@
     transition: all .5s ease 0s;
     transform-style: preserve-3d;
     transition: all .5s ease 0s !important;
+    
 
     .title{
         font-weight: 800;
@@ -38,6 +43,7 @@
         height: 100% !important;
         img{
             width: 100% !important;
+            height: 100%;
             transform-style: preserve-3d;
         }
 

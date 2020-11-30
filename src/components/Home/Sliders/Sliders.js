@@ -12,6 +12,7 @@ import { CodeSharp } from "@material-ui/icons";
 
 const Sliders = () => {
   const works = worksData.works;
+   // const [isRotate, setIsRotate] = useState(false)
 
   const activeSlide = document.querySelector('.swiper-slide-active');
   const next = document.querySelector('.swiper-slide-next');
@@ -28,7 +29,7 @@ const Sliders = () => {
   }
   // console.log(activeOverlay)
 
-  // const [isRotate, setIsRotate] = useState(false)
+ 
   const [dragging, setDragging] = useState(false)
 
   function drawMouseSpeedDemo() {
@@ -78,7 +79,7 @@ const Sliders = () => {
 
 
 
-                $('.swiper-slide')?.css('transform', 'rotateY(' + direction + pps / 40  + 'deg) scale(1)')
+                $('.swiper-slide')?.css('transform', 'rotateY(' + direction + pps / 40  + 'deg) scale(1.03)')
                 console.log(direction + pps / 110 )
                 $('.swiper-slide')?.css('transition', 'all ' + velocity + 's');
                 //console.log(velocity)
@@ -92,7 +93,7 @@ const Sliders = () => {
     setTimeout(mdraw, mrefreshinterval); 
 };
 
-drawMouseSpeedDemo();
+// drawMouseSpeedDemo();
 
 
 
@@ -103,7 +104,8 @@ drawMouseSpeedDemo();
         <Swiper 
           slidesPerView="auto" 
           centeredSlides="true" 
-          spaceBetween={60}
+          speed={1000}
+          initialSlide={1}
           onSlideChange={() => {
             setDragging(true)
             drawMouseSpeedDemo()
@@ -120,10 +122,11 @@ drawMouseSpeedDemo();
             setDragging(true) 
             drawMouseSpeedDemo()
           }}
-          onSetTranslate={() => {
-            setDragging(true) 
-            drawMouseSpeedDemo()
-          }}
+
+          // onSetTranslate={() => {
+          //   setDragging(true) 
+          //   drawMouseSpeedDemo()
+          // }}
           // onSliderMove ={ () => setIsRotate( true)}
           // onSlideNextTransitionEnd={ () => setIsRotate( true)}
        

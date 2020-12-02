@@ -63,6 +63,7 @@ const Sliders = () => {
  const handleBtn = (work) => {
   setIndividualSlide(true)
   setSlideItem(work)
+  console.log("click");
  }
 
  console.log(slideItem);
@@ -81,6 +82,8 @@ const Sliders = () => {
           preventInteractionOnTransition={individualSlide?true:false}
           allowSlidePrev={individualSlide?false:true}
           allowSlideNext={individualSlide?false:true}
+          watchOverflo="true"
+          // virtualTranslate = {individualSlide?"true":"false"}
           // touchStartPreventDefault="false"
           
           onSlideChange={() => {
@@ -119,7 +122,7 @@ const Sliders = () => {
           // onSliderMove ={ () => setIsRotate( true)}
           // onSlideNextTransitionEnd={ () => setIsRotate( true)}
        
-
+        // style={{display: individualSlide?'none':'block'}}
         >
           {/*  */}
           {works.map((work) => (
@@ -142,9 +145,7 @@ const Sliders = () => {
                   </div>
 
                 </div>
-                { individualSlide && <div  >
-      {/* { <Slide slideItem={slideItem}/> } */}
-      </div>}
+                
               </div>
             </SwiperSlide>
           ))}
@@ -154,7 +155,9 @@ const Sliders = () => {
       
     </div>
 
-     
+    {/* { individualSlide &&   <div>  <Slide slideItem={slideItem}/>  </div> } */}
+
+
     </div>
   );
 };

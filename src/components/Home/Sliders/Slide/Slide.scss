@@ -1,22 +1,31 @@
 // style={{zIndex:"1", position:"absolute", top: "0",left:"0", height:"100%", width: "100%"}}
 
 #individualSlide{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 999 !important;
-    width: 100%;
-    height: 100%;
+    position: relative;
+    top: -80px ;
+    z-index: -1 !important;
     clip-path: polygon(0 100%, 100% 100%, 100% 0%, 0 0%);
     pointer-events: all;
     opacity: 1;
     transition: opacity .1s, -webkit-clip-path .8s 0.23s cubic-bezier(0.79, -0.01, 0, 0.99);
     // animation-name: scaleIn;
     animation-duration: 1s;
+    .swiper-slide-next{
+       display: none !important;
+    }
+    .swiper-slide-prev{
+        opacity: 0 !important;
+    }
 
-    .slide{
-        position: absolute;
+
+    .slide1{
         
+        .img1{
+            width: 100%;
+            img{
+                width: 100% !important;
+            }
+        }
     }
 }
 

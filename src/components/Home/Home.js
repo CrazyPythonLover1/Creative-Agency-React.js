@@ -5,7 +5,7 @@ import Sliders from './Sliders/Sliders';
 const Home = () => {
     
     return (
-        <div>
+        <div   >
             <Navbar/>
             <Sliders/>
         </div>

@@ -4,13 +4,13 @@ import "./Slide.scss";
 const Slide = ({ slideItem }) => {
   return (
     <div id="individualSlide" className="individualSlide"  >
-      <div id="slide" className="slide"  >
+      <div id="slide1" className="slide1"  >
                 
-                <div className="img"  >
+                <div className="img1"  >
                 
                   <img src={slideItem.src} alt="" />
 {/* style={{opacity:1 , transform: `scale(2.9)`}} */}
-                  <div className="overlay"  >  
+                  <div className="overlay1"  >  
                   <div className="title">
                   .0{slideItem.id} <br/>
                   {slideItem.title}

@@ -82,6 +82,14 @@
 
     .white{
         color: white;
+        .active{
+            color: $yellow;
+            font-size: 20px;
+            border-bottom: 2px solid $yellow;
+        }
+        li:hover{
+            border-bottom: 2px solid $yellow;
+        }
     }
 
     ul{

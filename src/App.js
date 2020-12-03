@@ -13,8 +13,12 @@ function App() {
 // console.log(cursor.pageX)
 useEffect( () => {
   window.addEventListener('mousemove', dynamicCursor );
+
+ 
+
   return () => window.removeEventListener('mousemove', dynamicCursor);
 }, [] )
+
 
   return (
     <div style={{ }}>

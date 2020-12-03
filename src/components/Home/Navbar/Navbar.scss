@@ -3,7 +3,6 @@
 
 .portfolio_home__header{
     padding: 40px;
-    z-index: 1;
 }
 
 .logoMain{
@@ -32,6 +31,9 @@
         animation: none;
         opacity: 1;
     }
+    &.white{
+        color: white;
+    }
 }
 
 .hamburger{
@@ -43,10 +45,9 @@
     opacity: 1 !important;
     right: 40px;
 
-    &black{
-        .hamburger_part{
-            background: $blue;
-        }
+
+    .white{
+        background: $yellow;
     }
     &_part{
         $hamburgerPartHeight: 2px;
@@ -79,15 +80,21 @@
     width: 400px;
     padding: 0;
 
+    .white{
+        color: white;
+    }
+
     ul{
         list-style: none;
         margin: 0;
         padding:0;
 
+        
+
         li{
             margin-right: 15px;
             display: inline;
-
+            
             &.active{
                 font-size: 20px;
                 border-bottom: 2px solid $blue;

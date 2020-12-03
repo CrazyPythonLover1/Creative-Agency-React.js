@@ -12,7 +12,7 @@ import Navbar from "../Navbar/Navbar";
 
 
 
-const Sliders = () => {
+const Sliders = ({setNavHandleColor}) => {
 
   const works = worksData.works;
    const [isRotate, setIsRotate] = useState({})
@@ -36,6 +36,7 @@ const Sliders = () => {
     setTimeout(() => {
       setRotate(0)
     }, 700)
+
    }, [isRotate.diff])
 
 
@@ -63,17 +64,19 @@ const Sliders = () => {
  const handleBtn = (work) => {
   setIndividualSlide(true)
   setSlideItem(work)
+  setNavHandleColor("white")
   console.log("click");
  }
 
- console.log(slideItem);
+
 
   return (
     <div className={`container  ${individualSlide?"expand":""} `}   >
-      {/* <div style={{opacity:individualSlide?1:0}}> <Navbar/> </div>  */}
+      
     <div id="sliders" className="sliders">
       <div className="inner-slider">
        
+      {/* <div style={{opacity:individualSlide?1:0}}> <Navbar/> </div>  */}
         <Swiper 
           slidesPerView="auto" 
           centeredSlides="true"
@@ -82,7 +85,6 @@ const Sliders = () => {
           preventInteractionOnTransition={individualSlide?true:false}
           allowSlidePrev={individualSlide?false:true}
           allowSlideNext={individualSlide?false:true}
-          watchOverflo="true"
           // virtualTranslate = {individualSlide?"true":"false"}
           // touchStartPreventDefault="false"
           
@@ -125,15 +127,16 @@ const Sliders = () => {
         // style={{display: individualSlide?'none':'block'}}
         >
           {/*  */}
+          
           {works.map((work) => (
-            <SwiperSlide key={`slider-${work.id}`} style={{transform:`rotateY(${individualSlide?"":rotate}deg) scaleX(${rotate>20?1.1:1}) `}}   >
+            <SwiperSlide key={`slider-${work.id}`} style={{transform:`rotateY(${individualSlide?"":rotate}deg)  `}}   >
+              
               <div id="slide" className="slide"   >
-                 
                 <div className="title">
                   .0{work.id} <br/>
                   {work.title}
                 </div>
-                <div className="img" >
+                <div className="img" style={{transform: `scaleX(${rotate>20?1:1}) ` }} >
                   <img src={work.src} alt=""   />
 
                   <div className="overlay" style={{opacity:activeSlide?1:0 }} >

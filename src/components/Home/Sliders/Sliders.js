@@ -61,11 +61,18 @@ const Sliders = ({setNavHandleColor}) => {
   const [individualSlide, setIndividualSlide] = useState(false);
   const [slideItem, setSlideItem] = useState({})
 
+  const [ slideBg, setSlideBg] = useState(false)
+
  const handleBtn = (work) => {
   setIndividualSlide(true)
   setSlideItem(work)
-  setNavHandleColor("white")
-  console.log("click");
+  setNavHandleColor("white");
+
+  setTimeout(() => {
+    setSlideBg(true);
+  }, 1500)
+
+  
  }
 
 
@@ -160,7 +167,7 @@ const Sliders = ({setNavHandleColor}) => {
 
     
 
-{/* { individualSlide &&   <div>  <Slide slideItem={slideItem}/>  </div> } */}
+{ slideBg &&   <div>  <Slide slideItem={slideItem}/>  </div> }
     </div>
   );
 };

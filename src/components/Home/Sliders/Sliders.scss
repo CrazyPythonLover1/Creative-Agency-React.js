@@ -120,6 +120,7 @@
     pointer-events: all;;
     transition: opacity .1s, -webkit-clip-path .8s 0.23s cubic-bezier(0.79, -0.01, 0, 0.99);
     position: absolute;
+    top: 0;
     width: 100%;
     height: 100% !important;
     z-index: -1;
@@ -144,8 +145,8 @@
 
     .swiper-container {
         width: 100% !important;
-        height: 100% !important;
         padding-top: 0px !important;
+        height: inherit;
     }
 
     .swiper-wrapper{
@@ -156,6 +157,8 @@
         margin: 0;
         width: 100%;
         height: 100%;
+        padding-top: 200px !important;
+
         transition-property: left;
         transition-duration: 4s;
         transition-delay: 2s;
@@ -189,8 +192,9 @@
         #slide{
             z-index: 999;
                 .img{
+                    padding-top: 40px;
                     img {
-                        padding-top: 40px;
+                        
                         transform: scale(2.9);
                         transition: all .8s 0.23s cubic-bezier(0.79, -0.01, 0, 0.99);
                         
@@ -214,12 +218,21 @@
         
                 // }
         
-                .cats {
+                .category {
+                    position: absolute;
+                    left: 5%;
                     transition: all .8s .16s cubic-bezier(0.79, -0.01, 0, 0.99);
+                    opacity: 0;
                 }
         
                 .title {
                     transition: all .8s .19s cubic-bezier(0.79, -0.01, 0, 0.99);
+                    opacity: 0;
+
+                }
+                .button{
+                    opacity: 0;
+
                 }
         
             }

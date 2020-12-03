@@ -158,9 +158,9 @@ const Sliders = ({setNavHandleColor}) => {
       
     </div>
 
-    {/* { individualSlide &&   <div>  <Slide slideItem={slideItem}/>  </div> } */}
+    
 
-
+{/* { individualSlide &&   <div>  <Slide slideItem={slideItem}/>  </div> } */}
     </div>
   );
 };

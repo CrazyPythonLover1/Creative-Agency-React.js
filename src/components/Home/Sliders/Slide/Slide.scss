@@ -1,15 +1,19 @@
 // style={{zIndex:"1", position:"absolute", top: "0",left:"0", height:"100%", width: "100%"}}
 
 #individualSlide{
-    position: relative;
-    top: -80px ;
-    z-index: -1 !important;
+    position: absolute;
+    top: 0px ;
+    width: 100%;
+    height: 100%;
+    z-index: 11 !important;
     clip-path: polygon(0 100%, 100% 100%, 100% 0%, 0 0%);
     pointer-events: all;
     opacity: 1;
     transition: opacity .1s, -webkit-clip-path .8s 0.23s cubic-bezier(0.79, -0.01, 0, 0.99);
     // animation-name: scaleIn;
     animation-duration: 1s;
+
+
     .swiper-slide-next{
        display: none !important;
     }
@@ -18,12 +22,19 @@
     }
 
 
-    .slide1{
-        
-        .img1{
+    .slide__item{
+        height: 100%;
+        .img__item{
             width: 100%;
+            height: 100%;
             img{
                 width: 100% !important;
+                height: 100%;
+            }
+
+            .overlay__item{
+                position: absolute;
+                top: 0;
             }
         }
     }

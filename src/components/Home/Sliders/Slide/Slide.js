@@ -22,13 +22,7 @@ const Slide = ({ slideItem }) => {
         </div>
       </div> */}
 
-      {/* <span> UX works for </span>
-      <div class="dropping-texts">
-        <div>Developers</div>
-        <div>Designers</div>
-        <div>Coders</div>
-        <div>EVERYONE!</div>
-      </div> */}
+      
 
 
 <header class="hero hero--map gps-bg">
@@ -41,7 +35,13 @@ const Slide = ({ slideItem }) => {
 	<div class="gps-bg__fade"></div>
 
 	<h1 class="hero__title">
-		Animated GPS Map Background
+  UX works for 
+      <div class="dropping-texts"  >
+        <div>Developers</div>
+        <div>Designers</div>
+        <div>Coders</div>
+        <div>EVERYONE!</div>
+      </div>
 	</h1>
 	
 </header>

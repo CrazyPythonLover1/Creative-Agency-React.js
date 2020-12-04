@@ -64,12 +64,13 @@ const Sliders = ({setNavHandleColor}) => {
   const [ slideBg, setSlideBg] = useState(false)
 
  const handleBtn = (work) => {
-  setIndividualSlide(true)
+  setIndividualSlide(!individualSlide)
   setSlideItem(work)
   setNavHandleColor("white");
 
   setTimeout(() => {
     setSlideBg(true);
+    console.log(slideBg)
   }, 1500)
 
   
@@ -89,9 +90,9 @@ const Sliders = ({setNavHandleColor}) => {
           centeredSlides="true"
           speed={1000}
           initialSlide={1}
-          preventInteractionOnTransition={individualSlide?true:false}
-          allowSlidePrev={individualSlide?false:true}
-          allowSlideNext={individualSlide?false:true}
+          // preventInteractionOnTransition={individualSlide?true:false}
+          // allowSlidePrev={individualSlide?false:true}
+          // allowSlideNext={individualSlide?false:true}
           // virtualTranslate = {individualSlide?"true":"false"}
           // touchStartPreventDefault="false"
           
@@ -167,7 +168,7 @@ const Sliders = ({setNavHandleColor}) => {
 
     
 
-{ slideBg &&   <div>  <Slide slideItem={slideItem}/>  </div> }
+{ slideBg &&   <div>  <Slide slideItem={slideItem} setSlideBg={setSlideBg} setIndividualSlide={setIndividualSlide} setNavHandleColor={setNavHandleColor} />  </div> }
     </div>
   );
 };

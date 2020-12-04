@@ -14,10 +14,16 @@
     // animation-duration: 1s;
 
 
+    // for the gps bg 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Fira Sans", "Helvetica Neue", sans-serif;
+	line-height: 1.75;
+	// background-color: #fafafa;
+
+
 
   margin:0px;
   text-align:center;
-  padding-top:43vh;
+  // padding-top:43vh;
   color:#fff;
   font-family:'Roboto';
   font-size:36px;
@@ -55,116 +61,272 @@
 
 
 
-.dropping-texts {
-    display: inline-block;
-    width: 180px;
-    text-align: left;
-    height: 36px;
-    vertical-align: -2px;
-  }
+// .dropping-texts {
+//     display: inline-block;
+//     width: 180px;
+//     text-align: left;
+//     height: 36px;
+//     vertical-align: -2px;
+//   }
   
-  .dropping-texts > div {
-    font-size:0px;
-    opacity:0;
-    margin-left:-30px;
-    position:absolute;
-    font-weight:300;   
-    box-shadow: 0px 60px 25px -20px rgba(0,0,0,0.5);
-  }
+//   .dropping-texts > div {
+//     font-size:0px;
+//     opacity:0;
+//     margin-left:-30px;
+//     position:absolute;
+//     font-weight:300;   
+//     box-shadow: 0px 60px 25px -20px rgba(0,0,0,0.5);
+//   }
   
-  .dropping-texts > div:nth-child(1) {
-    animation: roll 5s linear infinite 0s;
-  }
-  .dropping-texts > div:nth-child(2) {
-    animation: roll 5s linear infinite 1s;
-  }
-  .dropping-texts > div:nth-child(3) {
-    animation: roll 5s linear infinite 2s;
-  }
-  .dropping-texts > div:nth-child(4) {
-    animation: roll2 5s linear infinite 3s;
-  }
+//   .dropping-texts > div:nth-child(1) {
+//     animation: roll 5s linear infinite 0s;
+//   }
+//   .dropping-texts > div:nth-child(2) {
+//     animation: roll 5s linear infinite 1s;
+//   }
+//   .dropping-texts > div:nth-child(3) {
+//     animation: roll 5s linear infinite 2s;
+//   }
+//   .dropping-texts > div:nth-child(4) {
+//     animation: roll2 5s linear infinite 3s;
+//   }
   
-  @keyframes roll {
+//   @keyframes roll {
+//     0% {
+//       font-size:0px;
+//       opacity:0;
+//       margin-left:-30px;
+//       margin-top:0px;
+//       transform: rotate(-25deg);
+//     }
+//     3% {
+//       opacity:1;
+//       transform: rotate(0deg);
+//     }
+//     5% {
+//       font-size:inherit;
+//       opacity:1;
+//       margin-left:0px;
+//       margin-top:0px;
+//     }
+//     20% {
+//       font-size:inherit;
+//       opacity:1;
+//       margin-left:0px;
+//       margin-top:0px;
+//       transform: rotate(0deg);
+//     }
+//     27% {
+//       font-size:0px;
+//       opacity:0.5;
+//       margin-left:20px;
+//       margin-top:100px;
+//     }
+//     100% {
+//       font-size:0px;
+//       opacity:0;
+//       margin-left:-30px;
+//       margin-top:0px;
+//       transform: rotate(15deg);
+//     }
+//   }
+  
+//   @keyframes roll2 {
+//     0% {
+//       font-size:0px;
+//       opacity:0;
+//       margin-left:-30px;
+//       margin-top:0px;
+//       transform: rotate(-25deg);
+//     }
+//     3% {
+//       opacity:1;
+//       transform: rotate(0deg);
+//     }
+//     5% {
+//       font-size:inherit;
+//       opacity:1;
+//       margin-left:0px;
+//       margin-top:0px;
+//     }
+//     30% {
+//       font-size:inherit;
+//       opacity:1;
+//       margin-left:0px;
+//       margin-top:0px;
+//       transform: rotate(0deg);
+//     }
+//     37% {
+//       font-size:1500px;
+//       opacity:0;
+//       margin-left:-1000px;
+//       margin-top:-800px;
+//     }
+//     100% {
+//       font-size:0px;
+//       opacity:0;
+//       margin-left:-30px;
+//       margin-top:0px;
+//       transform: rotate(15deg);
+//     }
+//   }
+  
+
+
+
+
+// Basic Formatting
+////////////////////////////////////////////////
+
+$purp: #6c38de;
+$lightpurp: #ac8dff;
+
+// Reset
+* {
+	padding: 0;
+	margin: 0;
+ 	box-sizing: border-box;
+ 	transition: all 0.25s cubic-bezier(.37,0,.45,.99);
+	
+ 	&:before,
+ 	&:after {
+    	box-sizing: inherit;
+	}
+	
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+// Defualt Styling
+body {
+	
+}
+
+@keyframes driving {
     0% {
-      font-size:0px;
-      opacity:0;
-      margin-left:-30px;
-      margin-top:0px;
-      transform: rotate(-25deg);
+        transform: translateY(-650px);
     }
-    3% {
-      opacity:1;
-      transform: rotate(0deg);
-    }
-    5% {
-      font-size:inherit;
-      opacity:1;
-      margin-left:0px;
-      margin-top:0px;
-    }
-    20% {
-      font-size:inherit;
-      opacity:1;
-      margin-left:0px;
-      margin-top:0px;
-      transform: rotate(0deg);
-    }
-    27% {
-      font-size:0px;
-      opacity:0.5;
-      margin-left:20px;
-      margin-top:100px;
-    }
+
     100% {
-      font-size:0px;
-      opacity:0;
-      margin-left:-30px;
-      margin-top:0px;
-      transform: rotate(15deg);
+        transform: translateY(0);
     }
-  }
-  
-  @keyframes roll2 {
-    0% {
-      font-size:0px;
-      opacity:0;
-      margin-left:-30px;
-      margin-top:0px;
-      transform: rotate(-25deg);
-    }
-    3% {
-      opacity:1;
-      transform: rotate(0deg);
-    }
-    5% {
-      font-size:inherit;
-      opacity:1;
-      margin-left:0px;
-      margin-top:0px;
-    }
-    30% {
-      font-size:inherit;
-      opacity:1;
-      margin-left:0px;
-      margin-top:0px;
-      transform: rotate(0deg);
-    }
-    37% {
-      font-size:1500px;
-      opacity:0;
-      margin-left:-1000px;
-      margin-top:-800px;
-    }
-    100% {
-      font-size:0px;
-      opacity:0;
-      margin-left:-30px;
-      margin-top:0px;
-      transform: rotate(15deg);
-    }
-  }
-  
+}
+
+// Demo Styles
+// Generic Hero
+.hero {
+  height: 100%;
+	&__title {
+		padding: 3em 2rem 16rem;
+		text-align: center;
+		color: darken($purp, 50%);
+		position: relative;
+		z-index: 0001;
+	}
+}
+
+// GPS Hero
+.gps-bg {
+
+  // background-color: $lightpurp;
+  animation:bg 5s linear infinite;
+  position: relative;
+	perspective: 500px;
+	overflow: hidden;
+	&:after {
+		// Angled bottom
+		content: '';
+		// background-color: #fafafa;
+		position: absolute;
+		width: 200%;
+		height: 5em;
+		bottom: 0;
+		transform: skewY(-2deg);
+	}
+	// The nuts and bolts of making this work
+	&__guts {
+		position: absolute;
+		transform: rotateX(45deg);
+		width: calc(100% + 1000px); // This makes extra space to overflow the edges with filled map
+		height: 100%;
+		left: -500px; // Re-centers the container
+	}
+	&__bg {
+		height: 1300px;
+		background-image: url(http://www.rastrac.com/hubfs/roads.svg);
+		background-position: 50%;
+		background-size: 25%;
+		position: absolute;
+		top: -162px; // Hide the empty top reset by moving the object up
+		width: 100%;
+		transform: translateY(-650px);
+		animation: driving 10000ms linear 0ms infinite;
+	}
+	&__route {
+		width: 2em;
+		background-color: #fff;
+		position: absolute;
+		top: -162px;
+		bottom: -162px;
+		left: 50%;
+		transform: translateX(-50%);
+		box-shadow: 0 0 13px 5px rgba(darken($purp, 30%), 0.25);
+		&:after {
+			content: '';
+			width: 60%;
+			background-color: $purp;
+			position: absolute;
+			top: 0;
+			bottom: 35%;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+	&__fade {
+		// The fade at the top helps hide any crimes (it's pretty seamless without it though)
+    // background-image: linear-gradient( to bottom,  $lightpurp 10%, rgba($lightpurp, 0) 100%);
+    animation:fadeBg 5s linear infinite;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 60%;
+		z-index: 1;
+	}
+	&__marker {
+		height: 6em;
+		width: 6em;
+		background-color: #fff;
+		// 3D lip
+		border:{
+			right: 1px solid #ddd;
+			bottom: 3px solid #ddd;
+			left: 1px solid #ddd;
+			radius: 100%;
+		}
+		position: absolute;
+		top: 60%;
+		left: 50%;
+		transform: translateX(-50%);
+		box-shadow: 0 0.125em 10px 3px rgba(darken($purp, 30%), 0.25);
+		&:after {
+			// Arrow
+			content: '';
+			border-left: 1.5em solid transparent;
+			border-right: 1.5em solid transparent;
+			border-bottom: 3em solid $purp;
+			position: absolute;
+			top: 20%;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+}
+
+
   @keyframes bg {
     0% {background: #ff0075;}
     3% {background: #0094ff;}
@@ -178,3 +340,20 @@
     83% {background: #F44336;}
     100% {background: #F44336;}
   }
+
+
+  @keyframes fadeBg {
+    0% {background-image: linear-gradient( to bottom,  #ff0075 10%, rgba(#ff0075, 0) 100%);}
+    3% {background-image: linear-gradient( to bottom,  #0094ff 10%, rgba(#0094ff, 0) 100%);}
+    20% {background-image: linear-gradient( to bottom,  #0094ff 10%, rgba(#0094ff, 0) 100%);}
+    23% {background-image: linear-gradient( to bottom,  #b200ff 10%, rgba(#b200ff, 0) 100%);}
+    40% {background-image: linear-gradient( to bottom,  #b200ff 10%, rgba(#b200ff, 0) 100%);}
+    43% {background-image: linear-gradient( to bottom,  #8BC34A 10%, rgba(#8BC34A, 0) 100%);}
+    60% {background-image: linear-gradient( to bottom,  #8BC34A 10%, rgba(#8BC34A, 0) 100%);}
+    63% {background-image: linear-gradient( to bottom,  #F44336 10%, rgba(#F44336, 0) 100%);}
+    80% {background-image: linear-gradient( to bottom,  #F44336 10%, rgba(#F44336, 0) 100%);}
+    83% {background-image: linear-gradient( to bottom,  #F44336 10%, rgba(#F44336, 0) 100%);}
+    100% {background-image: linear-gradient( to bottom,  #F44336 10%, rgba(#F44336, 0) 100%);}
+  }
+
+  // background-image: linear-gradient( to bottom,  #F44336 10%, rgba(#F44336, 0) 100%);

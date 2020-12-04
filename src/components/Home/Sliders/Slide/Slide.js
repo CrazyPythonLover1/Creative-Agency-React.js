@@ -22,13 +22,29 @@ const Slide = ({ slideItem }) => {
         </div>
       </div> */}
 
-      <span  > UX works for </span>
+      {/* <span> UX works for </span>
       <div class="dropping-texts">
         <div>Developers</div>
         <div>Designers</div>
         <div>Coders</div>
         <div>EVERYONE!</div>
-      </div>
+      </div> */}
+
+
+<header class="hero hero--map gps-bg">
+	
+	<div class="gps-bg__guts">
+		<div class="gps-bg__bg"></div>
+		<div class="gps-bg__route"></div>
+		<div class="gps-bg__marker"></div>
+	</div>
+	<div class="gps-bg__fade"></div>
+
+	<h1 class="hero__title">
+		Animated GPS Map Background
+	</h1>
+	
+</header>
     </div>
   );
 };

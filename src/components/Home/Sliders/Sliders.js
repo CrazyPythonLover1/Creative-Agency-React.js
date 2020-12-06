@@ -12,7 +12,7 @@ import Navbar from "../Navbar/Navbar";
 
 
 
-const Sliders = ({setNavHandleColor}) => {
+const Sliders = ({setNavHandleColor, slideBg, setSlideBg}) => {
 
   const works = worksData.works;
    const [isRotate, setIsRotate] = useState({})
@@ -61,7 +61,7 @@ const Sliders = ({setNavHandleColor}) => {
   const [individualSlide, setIndividualSlide] = useState(false);
   const [slideItem, setSlideItem] = useState({})
 
-  const [ slideBg, setSlideBg] = useState(false)
+  // const [ slideBg, setSlideBg] = useState(false)
 
  const handleBtn = (work) => {
   setIndividualSlide(!individualSlide)
@@ -114,7 +114,7 @@ const Sliders = ({setNavHandleColor}) => {
           onTouchStart={() => {
             setDragging(true) 
             // drawMouseSpeedDemo()
-            // console.log("Touch Start")
+            console.log("Touch Start")
 
           } }
           onClick={() => {
@@ -150,7 +150,7 @@ const Sliders = ({setNavHandleColor}) => {
                   <div className="overlay" style={{opacity:activeSlide?1:0 }} >
                     <div className="category"> {work.category} </div>
                     <div className="title"> {work.productTitle} </div>
-                    <div className="button" onClick={() => handleBtn(work)}> <span>View case study</span> <ArrowForwardIcon/>
+                    <div className="slider-button" onClick={() => handleBtn(work)}> <span>View case study</span> <ArrowForwardIcon/>
                    
                     </div>
                   </div>
@@ -165,8 +165,6 @@ const Sliders = ({setNavHandleColor}) => {
       </div>
       
     </div>
-
-    
 
 { slideBg &&   <div>  <Slide slideItem={slideItem} setSlideBg={setSlideBg} setIndividualSlide={setIndividualSlide} setNavHandleColor={setNavHandleColor} />  </div> }
     </div>

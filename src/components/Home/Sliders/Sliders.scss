@@ -10,6 +10,11 @@
     padding-top: 20px !important;
 }
 
+.swiper-slide:hover .dynamicCursor{
+    width: 40px !important;
+    height: 40px !important;
+}
+
 .swiper-wrapper{
     // transition: all .5s ease 0s !important;
     animation: 0s ease 0s 1 normal none running none;
@@ -83,7 +88,7 @@
                 transform-style: preserve-3d;
             }
 
-            .button{
+            .slider-button{
                 color: #07101d;
                 width: 170px;
                 font-size: 14px;
@@ -230,7 +235,7 @@
                     opacity: 0;
 
                 }
-                .button{
+                .slider-button{
                     opacity: 0;
 
                 }

@@ -121,7 +121,8 @@ body {
 .hero {
   height: 100%;
 	&__title {
-		// padding: 4em 2rem 16rem;
+    // padding: 4em 2rem 16rem;
+    // animation:bg 5s linear infinite;
     color: darken($purp, 50%);
     position: absolute;
     top: 50%;

@@ -1,9 +1,12 @@
 import React from 'react';
+import Navbar from '../../Navbar/Navbar';
 import './Card.scss';
 
 const Card = () => {
     return (
+		<> <Navbar navHandleColor={"white"}/> 
         <div className="card">
+			
             	<div class="card-container group">
 		<div class="grid-1-5">
 			<h2>Basic</h2>
@@ -63,6 +66,7 @@ const Card = () => {
 		</div>		
 	</div>
         </div>
+		</>
     );
 };
 

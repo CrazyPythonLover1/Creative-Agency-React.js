@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import "./Slide.scss";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
-import Card from "../Card/Card"
-import playBtn from '../../../../images/google-play-button.png';
+import Card from "../Card/Card";
+import playBtn from "../../../../images/google-play-button.png";
 
 const Slide = ({
   slideItem,
@@ -13,10 +13,9 @@ const Slide = ({
   console.log(slideItem);
 
   return (
-	  <div className="individual__slide__container">
-      
-<div id="individualSlide" className="individualSlide">
-      {/* {
+    <div className="individual__slide__container">
+      <div id="individualSlide" className="individualSlide">
+        {/* {
       slideItem.id === 1 || slideItem.id === 2 ? (
         <>
         <h1 class="hero__title">
@@ -39,74 +38,69 @@ const Slide = ({
         </>
       ) : ( */}
         <>
-        <div className="loader-bg">
-          <div class="container-slide">
-            <div class="spinner">
-              <div class="spinner-item"></div>
-              <div class="spinner-item"></div>
-              <div class="spinner-item"></div>
-              <div class="spinner-item"></div>
-              <div class="spinner-item"></div>
-            </div>
+          <div className="loader-bg">
+            <div class="container-slide">
+              <div class="spinner">
+                <div class="spinner-item"></div>
+                <div class="spinner-item"></div>
+                <div class="spinner-item"></div>
+                <div class="spinner-item"></div>
+                <div class="spinner-item"></div>
+              </div>
 
-            <div class="spinner">
-              <div class="spinner-item"></div>
-              <div class="spinner-item"></div>
-              <div class="spinner-item"></div>
-            </div>
+              <div class="spinner">
+                <div class="spinner-item"></div>
+                <div class="spinner-item"></div>
+                <div class="spinner-item"></div>
+              </div>
 
-            <div class="spinner">
-              <div class="spinner-item"></div>
-              <div class="spinner-item"></div>
-              <div class="spinner-item"></div>
-            </div>
+              <div class="spinner">
+                <div class="spinner-item"></div>
+                <div class="spinner-item"></div>
+                <div class="spinner-item"></div>
+              </div>
 
-            <div class="spinner">
-              <div class="spinner-item"></div>
-              <div class="spinner-item"></div>
-              <div class="spinner-item"></div>
-            </div>
+              <div class="spinner">
+                <div class="spinner-item"></div>
+                <div class="spinner-item"></div>
+                <div class="spinner-item"></div>
+              </div>
 
-            <div class="spinner">
-              <div class="spinner-item"></div>
-              <div class="spinner-item"></div>
-              <div class="spinner-item"></div>
-              <div class="spinner-item"></div>
-              <div class="spinner-item"></div>
-            </div>
+              <div class="spinner">
+                <div class="spinner-item"></div>
+                <div class="spinner-item"></div>
+                <div class="spinner-item"></div>
+                <div class="spinner-item"></div>
+                <div class="spinner-item"></div>
+              </div>
 
-            <div class="spinner">
-              <div class="spinner-item"></div>
-              <div class="spinner-item"></div>
+              <div class="spinner">
+                <div class="spinner-item"></div>
+                <div class="spinner-item"></div>
+              </div>
             </div>
           </div>
-          
-        </div>
-        
         </>
 
-      {/* )} */}
+        {/* )} */}
 
-      <h1 class="hero__title">
-        <span style={{fontWeight:"100"}}>  UX works for </span> 
-        <div class="dropping-texts">
-          <div>Developers</div>
-          <div>Designers</div>
-          <div>Coders</div>
-          <div>EVERYONE!</div>
+        <h1 class="hero__title">
+          <span style={{ fontWeight: "100" }}> UX works for </span>
+          <div class="dropping-texts">
+            <div>Developers</div>
+            <div>Designers</div>
+            <div>Coders</div>
+            <div>EVERYONE!</div>
+          </div>
+        </h1>
+
+        <div className="google-play-button">
+          <img src={playBtn} alt="" />
         </div>
-      </h1>
-
-      
-
-      <div className="google-play-button">
-        <img src={playBtn} alt=""/> 
       </div>
 
-    </div>
-    
-    {/* <Card/> */}
-    <div
+      {/* <Card/> */}
+      <div
         className="back__button"
         onClick={() => {
           setSlideBg(false);
@@ -116,8 +110,8 @@ const Slide = ({
       >
         <ArrowBackIcon />
       </div>
-	</div>
-    
+
+    </div>
   );
 };
 

@@ -71,7 +71,7 @@ const Sliders = ({setNavHandleColor, slideBg, setSlideBg, setCursorClass}) => {
   setTimeout(() => {
     setSlideBg(true);
     console.log(slideBg)
-  }, 1500)
+  }, 2500)
   
  }
 

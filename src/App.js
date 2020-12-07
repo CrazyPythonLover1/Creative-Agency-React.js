@@ -11,7 +11,8 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Sliders from './components/Home/Sliders/Sliders';
+import Slide from './components/Home/Sliders/Slide/Slide';
+import Slideer from './components/Home/Sliders/Sliders';
 import Navbar from './components/Home/Navbar/Navbar';
 
 
@@ -20,9 +21,9 @@ import Navbar from './components/Home/Navbar/Navbar';
 function App() {
   const [cursor, setCursor] = useState({x:null, y: null})
   const [cursorClass, setCursorClass] = useState('')
-  console.log(cursorClass)
   const [ slideBg, setSlideBg] = useState(false)
   const [ navHandleColor, setNavHandleColor] = useState("black")
+  const [ cardBtn, setCardBtn] = useState(false)
   
   const dynamicCursor = e => (
     setCursor({x:e.clientX, y:e.clientY, pageX:e.pageX})
@@ -44,12 +45,12 @@ useEffect( () => {
         <Route exact path="/">
           <Home slideBg={slideBg} setSlideBg={setSlideBg} setNavHandleColor={setNavHandleColor} setCursorClass={setCursorClass} />
         </Route>
-        <Route path="/pricing">
-          <Card/>
+        <Route path="/special">
+          <Card setCardBtn={setCardBtn} />
         </Route>
-        {/* <Route path="/work">
-          <Sliders/>
-        </Route> */}
+        <Route path="/work">
+          <Slide cardBtn={cardBtn} />
+        </Route>
       </Switch>
       
       <div className={` cursor`}  >

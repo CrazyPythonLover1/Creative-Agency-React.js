@@ -9,12 +9,13 @@ const Slide = ({
   setSlideBg,
   setIndividualSlide,
   setNavHandleColor,
+  cardBtn
 }) => {
   // console.log(slideItem);
 
   return (
     <div className="individual__slide__container">
-      <div id="individualSlide" className="individualSlide">
+      <div id="individualSlide" className="individualSlide" style={{zIndex:cardBtn?"-1":"1"}}>
         {/* {
       slideItem.id === 1 || slideItem.id === 2 ? (
         <>

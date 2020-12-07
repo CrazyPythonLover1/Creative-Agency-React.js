@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Navbar from "../../Navbar/Navbar";
 import "./Card.scss";
 
-const Card = () => {
+const Card = ({setCardBtn}) => {
   return (
     <>
       {/* <Navbar navHandleColor={"white"}/>  */}
@@ -19,9 +20,10 @@ const Card = () => {
               <li>Unlimited Data Transfer</li>
               <li>10GB Local Storage</li>
             </ul>
-            <a href="" class="button">
-              Sign Up
-            </a>
+			 <div class="button" onClick={() => setCardBtn(true)} >
+             <Link to="/work">  Sign Up </Link>
+            </div> 
+            
           </div>
           <div class="grid-1-5">
             <h2>Startup</h2>
@@ -34,9 +36,9 @@ const Card = () => {
               <li>Unlimited Data Transfer</li>
               <li>20GB Local Storage</li>
             </ul>
-            <a href="" class="button">
-              Sign Up
-            </a>
+            <div class="button" onClick={() => setCardBtn(true)} >
+             <Link to="/work">  Sign Up </Link>
+            </div> 
           </div>
           <div class="grid-1-5">
             <h2>Growth</h2>
@@ -49,9 +51,9 @@ const Card = () => {
               <li>Unlimited Data Transfer</li>
               <li>30GB Local Storage</li>
             </ul>
-            <a href="" class="button">
-              Sign Up
-            </a>
+            <div class="button" onClick={() => setCardBtn(true)} >
+             <Link to="/work">  Sign Up </Link>
+            </div> 
           </div>
           <div class="grid-1-5">
             <h2>Premium</h2>
@@ -64,9 +66,9 @@ const Card = () => {
               <li>Phone Support</li>
               <li>Unlimited Data Transfer</li>
             </ul>
-            <a href="" class="button">
-              Sign Up
-            </a>
+            <div class="button" onClick={() => setCardBtn(true)} >
+             <Link to="/work">  Sign Up </Link>
+            </div> 
           </div>
           {/* <div class="grid-1-5">
             <h2>Enterprise</h2>

@@ -25,7 +25,7 @@ const Navbar = ({navHandleColor, setSlideBg, setNavHandleColor}) => {
               setHandleWorkActive(true)
               }}>Our work</li> </Link> 
 
-               <Link to="/pricing"> <li className={`${handlePricingActive?'active pricing-active':" " }  trigger`}  onClick={() => {
+               <Link to="/special"> <li className={`${handlePricingActive?'active pricing-active':" " }  trigger`}  onClick={() => {
               setNavHandleColor("black")
               setHandlePricingActive(true)
               setHandleWorkActive(false)

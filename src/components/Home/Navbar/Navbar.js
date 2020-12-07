@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.scss";
 
 const Navbar = ({navHandleColor, setSlideBg, setNavHandleColor}) => {
+  const [handleWorkActive, setHandleWorkActive] = useState(true)
+  const [handlePricingActive, setHandlePricingActive] = useState(false)
   const handleSlideBg =  () => {
     setSlideBg(false);
   }
@@ -16,19 +18,22 @@ const Navbar = ({navHandleColor, setSlideBg, setNavHandleColor}) => {
           </div>
           <div className="nav">
             <ul className={navHandleColor}>
-            <Link to="/"> <li  className="active trigger"  onClick={() => {
+            <Link to="/"> <li  className={`${handleWorkActive?'active':" " }  trigger`}  onClick={() => {
               setSlideBg(false)
               setNavHandleColor("black")
+              setHandlePricingActive(false)
+              setHandleWorkActive(true)
               }}>Our work</li> </Link> 
 
-               <Link to="/pricing"> <li className="trigger" onClick={() => {
-              
+               <Link to="/pricing"> <li className={`${handlePricingActive?'active':" " }  trigger`}  onClick={() => {
               setNavHandleColor("white")
+              setHandlePricingActive(true)
+              setHandleWorkActive(false)
               }}> Pricing </li>  </Link> 
               <li className="trigger">About us</li>
               <li className="trigger">Contact us</li>
               <div className="backbutton" onClick={() => setSlideBg(false)} >
-                back
+               
               </div>
             </ul>
           </div>

@@ -7,7 +7,6 @@
 
 .portfolio_home__header{
     padding: 40px;
-    transition: color .3s ease 0s;
 
 }
 
@@ -31,7 +30,7 @@
     position: relative;
     margin-right: 80px;
     top: 5px;
-    transition: color .5s ease 0s;
+    transition: color .3s ease 0s;
 
 
     &.black{
@@ -52,7 +51,6 @@
     height: 20px;
     opacity: 1 !important;
     right: 40px;
-    transition: color .5s ease 0s;
 
 
 
@@ -89,17 +87,18 @@
     margin: auto;
     width: 400px;
     padding: 0;
-    transition: color .5s ease 0s;
 
     .white{
         color: white;
+
         .active{
             color: $yellow;
             font-size: 20px;
             border-bottom: 2px solid $yellow;
-        transition: color .5s ease 0s;
 
         }
+
+        
         li:hover{
             border-bottom: 2px solid $yellow;
         }
@@ -109,7 +108,6 @@
         list-style: none;
         margin: 0;
         padding:0;
-        transition: color .5s ease 0s;
 
         
 
@@ -126,6 +124,12 @@
                 border-bottom: 2px solid $blue;
             }
         }
+
+
+        .pricing-active{
+            border-bottom: 2px solid green !important;
+        }
+
     }
 
 

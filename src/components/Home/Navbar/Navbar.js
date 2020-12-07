@@ -25,11 +25,11 @@ const Navbar = ({navHandleColor, setSlideBg, setNavHandleColor}) => {
               setHandleWorkActive(true)
               }}>Our work</li> </Link> 
 
-               <Link to="/pricing"> <li className={`${handlePricingActive?'active':" " }  trigger`}  onClick={() => {
-              setNavHandleColor("white")
+               <Link to="/pricing"> <li className={`${handlePricingActive?'active pricing-active':" " }  trigger`}  onClick={() => {
+              setNavHandleColor("black")
               setHandlePricingActive(true)
               setHandleWorkActive(false)
-              }}> Pricing </li>  </Link> 
+              }}> <span className="" >Special</span></li>  </Link> 
               <li className="trigger">About us</li>
               <li className="trigger">Contact us</li>
               <div className="backbutton" onClick={() => setSlideBg(false)} >

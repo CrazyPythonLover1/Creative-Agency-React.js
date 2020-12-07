@@ -46,9 +46,9 @@ useEffect( () => {
       </Switch>
       
       <div className="dynamicCursor" style={{position:"fixed", transform: `translateX(calc(${cursor.x}px - 50%)) translateY(calc(${cursor.y}px - 50%))`, opacity:cursor.x?1:0 }} ></div>
-      <div style={{ display: slideBg?"block":"none", zIndex:"-1"}}>
+      {/* <div style={{ display: slideBg?"block":"none", zIndex:"-1"}}>
       <Card/>
-      </div>
+      </div> */}
     </div>
     </Router>
     

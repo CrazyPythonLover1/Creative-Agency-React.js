@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./Slide.scss";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import Card from "../Card/Card"
+import playBtn from '../../../../images/google-play-button.png';
 
 const Slide = ({
   slideItem,
@@ -87,7 +88,7 @@ const Slide = ({
       {/* )} */}
 
       <h1 class="hero__title">
-        UX works for
+        <span style={{fontWeight:"100"}}>  UX works for </span> 
         <div class="dropping-texts">
           <div>Developers</div>
           <div>Designers</div>
@@ -96,7 +97,16 @@ const Slide = ({
         </div>
       </h1>
 
-      <div
+      
+
+      <div className="google-play-button">
+        <img src={playBtn} alt=""/> 
+      </div>
+
+    </div>
+    
+    {/* <Card/> */}
+    <div
         className="back__button"
         onClick={() => {
           setSlideBg(false);
@@ -106,9 +116,6 @@ const Slide = ({
       >
         <ArrowBackIcon />
       </div>
-    </div>
-    
-    {/* <Card/> */}
 	</div>
     
   );

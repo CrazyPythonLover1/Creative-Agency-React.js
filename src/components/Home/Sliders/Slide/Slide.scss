@@ -1,5 +1,22 @@
 // style={{zIndex:"1", position:"absolute", top: "0",left:"0", height:"100%", width: "100%"}}
 
+
+.individual__slide__container{
+  .back__button{
+    position: absolute;
+    bottom: 100px;
+    left: 5%;
+    z-index: 9999 !important;
+  
+    .MuiSvgIcon-root{
+      font-size: 2rem !important;
+      color: white;
+    }
+  }
+  
+}
+
+
 #individualSlide{
     position: absolute;
     top: 0px ;
@@ -24,10 +41,7 @@
   margin:0px;
   text-align:center;
   // padding-top:43vh;
-  color:#fff;
-  font-family:'Roboto';
-  font-size:36px;
-  font-weight:100;
+  
   overflow:hidden;
   // animation:bg 5s linear infinite;
 
@@ -58,14 +72,12 @@
     //     }
     // }
 
-    .back__button{
-      position: absolute;
-      bottom: 50px;
-      left: 5%;
 
-      .MuiSvgIcon-root{
-        font-size: 2rem !important;
-      }
+    .google-play-button{
+      position: absolute;
+      bottom: 100px;
+      left: 50%;
+      transform: translateX(-50%)
     }
 }
 
@@ -118,26 +130,31 @@ body {
 
 // Demo Styles
 // Generic Hero
+
+
 .hero {
-  height: 100%;
 	&__title {
     // padding: 4em 2rem 16rem;
     // animation:bg 5s linear infinite;
-    color: darken($purp, 50%);
     position: absolute;
-    top: 50%;
-    left: 40%;
+    top: 40%;
+    left: 50%;
     transform: translate(-50%, -50%);
     z-index: 0001;
-    font-weight:300;  
+    color:#fff;
+    font-size:36px;
+    font-weight:100 !important;
+
+
+  
     
     .dropping-texts {
     display: inline-block !important;
     width: 180px;
-    height: 90px;
+    height: 46px;
     vertical-align: -2px;
     position: relative;
-    left: 15px;
+    left: 10px;
   }
   
   .dropping-texts > div {
@@ -145,7 +162,7 @@ body {
     opacity:0;
     margin-left:-30px;
     position:absolute;
-    font-weight:300;   
+    font-weight:400 !important;   
     // box-shadow: 0px 60px 25px -20px rgba(0,0,0,0.5);
   }
   
@@ -412,17 +429,17 @@ body {
     top: 0;
     height: 100%;
     width: 100%;
+    display: grid;
+	  place-items: center;
   }
   .container-slide {
-    margin-top: 7rem;
-    margin-bottom: 7rem;
     display: grid;
     grid-template-columns: repeat(2, auto);
     place-items: center;
     gap: 7rem;
-    row-gap: 15rem;
     position: relative;
-    top: 18%;
+    top: -10%;
+    transform: translateY(0%);
   }
   
   @media (min-width: 600px) {

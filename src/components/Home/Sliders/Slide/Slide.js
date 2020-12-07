@@ -97,6 +97,24 @@ const Slide = ({
         <div className="google-play-button">
           <img src={playBtn} alt="" />
         </div>
+        
+        <div className="features-container">
+          <div className="features">
+            <ul>
+              <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora, quam magni. Provident repellat, vero </li>
+              <li>Nisi ipsa quas ipsum itaque saepe, id porro illum aperiam, dolorum maxime fuga. Provident expedita modi </li>
+              <li>Consectetur repellat sequi quis commodi, veritatis quos eos qui, necessitatibus sapiente repellendus, </li>
+            </ul>
+          </div>
+
+          <div className="features-right">
+            <ul>
+              <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora, quam magni. Provident repellat, vero </li>
+              <li>Nisi ipsa quas ipsum itaque saepe, id porro illum aperiam, dolorum maxime fuga. Provident expedita modi </li>
+              <li>Consectetur repellat sequi quis commodi, veritatis quos eos qui, necessitatibus sapiente repellendus, </li>
+            </ul>
+          </div>
+        </div>
       </div>
 
       {/* <Card/> */}
@@ -110,6 +128,8 @@ const Slide = ({
       >
         <ArrowBackIcon />
       </div>
+
+      
 
     </div>
   );

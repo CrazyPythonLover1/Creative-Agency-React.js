@@ -12,7 +12,7 @@ import Navbar from "../Navbar/Navbar";
 
 
 
-const Sliders = ({setNavHandleColor, slideBg, setSlideBg}) => {
+const Sliders = ({setNavHandleColor, slideBg, setSlideBg, setCursorClass}) => {
 
   const works = worksData.works;
    const [isRotate, setIsRotate] = useState({})
@@ -72,10 +72,13 @@ const Sliders = ({setNavHandleColor, slideBg, setSlideBg}) => {
     setSlideBg(true);
     console.log(slideBg)
   }, 1500)
-
   
  }
 
+
+ const hadleCursor = () => {
+  setCursorClass('slidersCursor')
+ }
 
 
   return (
@@ -137,7 +140,7 @@ const Sliders = ({setNavHandleColor, slideBg, setSlideBg}) => {
           {/*  */}
           
           {works.map((work) => (
-            <SwiperSlide key={`slider-${work.id}`} style={{transform:`rotateY(${individualSlide?"":rotate}deg)  `}}   >
+            <SwiperSlide key={`slider-${work.id}`} style={{transform:`rotateY(${individualSlide?"":rotate}deg)  `}} onMouseEnter={() => hadleCursor()} onMouseLeave={() => setCursorClass('')} >
               
               <div id="slide" className="slide"   >
                 <div className="title">

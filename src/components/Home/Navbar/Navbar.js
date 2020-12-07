@@ -2,8 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.scss";
 
-const Navbar = ({navHandleColor}) => {
-  console.log(navHandleColor)
+const Navbar = ({navHandleColor, setSlideBg, setNavHandleColor}) => {
+  const handleSlideBg =  () => {
+    setSlideBg(false);
+  }
   return (
     <div>
       <div className="page_portfolio" >
@@ -14,10 +16,20 @@ const Navbar = ({navHandleColor}) => {
           </div>
           <div className="nav">
             <ul className={navHandleColor}>
-            <Link to="/"> <li className="active trigger">Our work</li> </Link> 
-               <Link to="/pricing"> <li className="trigger"> Pricing </li>  </Link> 
+            <Link to="/"> <li  className="active trigger"  onClick={() => {
+              setSlideBg(false)
+              setNavHandleColor("black")
+              }}>Our work</li> </Link> 
+
+               <Link to="/pricing"> <li className="trigger" onClick={() => {
+              
+              setNavHandleColor("white")
+              }}> Pricing </li>  </Link> 
               <li className="trigger">About us</li>
               <li className="trigger">Contact us</li>
+              <div className="backbutton" onClick={() => setSlideBg(false)} >
+                back
+              </div>
             </ul>
           </div>
           <div className={`number black ${navHandleColor}`}>0161 345 3464</div>

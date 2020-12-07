@@ -10,7 +10,7 @@ const Slide = ({
   setIndividualSlide,
   setNavHandleColor,
 }) => {
-  console.log(slideItem);
+  // console.log(slideItem);
 
   return (
     <div className="individual__slide__container">

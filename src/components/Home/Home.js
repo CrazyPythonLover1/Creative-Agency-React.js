@@ -3,9 +3,9 @@ import Navbar from './Navbar/Navbar';
 import Sliders from './Sliders/Sliders';
 import Card from './Sliders/Card/Card'
 
-const Home = ({slideBg, setSlideBg}) => {
+const Home = ({slideBg, setSlideBg, setNavHandleColor}) => {
     
-    const [ navHandleColor, setNavHandleColor] = useState("black")
+    
 
     const handleColor = () => {
 
@@ -13,7 +13,7 @@ const Home = ({slideBg, setSlideBg}) => {
 
     return (
         <div>
-            <Navbar navHandleColor={navHandleColor} />
+            {/* <Navbar setSlideBg={setSlideBg} navHandleColor={navHandleColor} /> */}
             <Sliders slideBg={slideBg} setSlideBg={setSlideBg} setNavHandleColor={setNavHandleColor} />
             {/* <Card/> */}
         </div>

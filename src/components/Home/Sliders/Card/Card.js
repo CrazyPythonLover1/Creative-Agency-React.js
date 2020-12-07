@@ -4,7 +4,8 @@ import './Card.scss';
 
 const Card = () => {
     return (
-		<> <Navbar navHandleColor={"white"}/> 
+		<> 
+		{/* <Navbar navHandleColor={"white"}/>  */}
         <div className="card">
 			
             	<div class="card-container group">

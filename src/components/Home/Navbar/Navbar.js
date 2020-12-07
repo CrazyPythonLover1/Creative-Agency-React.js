@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.scss";
 
 const Navbar = ({navHandleColor}) => {
@@ -13,8 +14,8 @@ const Navbar = ({navHandleColor}) => {
           </div>
           <div className="nav">
             <ul className={navHandleColor}>
-              <li className="active trigger">Our work</li>
-              <li className="trigger">Our services</li>
+            <Link to="/"> <li className="active trigger">Our work</li> </Link> 
+               <Link to="/pricing"> <li className="trigger"> Pricing </li>  </Link> 
               <li className="trigger">About us</li>
               <li className="trigger">Contact us</li>
             </ul>

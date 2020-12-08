@@ -29,7 +29,7 @@ const Navbar = ({navHandleColor, setSlideBg, setNavHandleColor}) => {
               setNavHandleColor("black")
               setHandlePricingActive(true)
               setHandleWorkActive(false)
-              }}> <span className="" >Special</span></li>  </Link> 
+              }}> <span className="" style={{display:"inline-block"}} >Special <br/> Pricing</span></li>  </Link> 
               <li className="trigger">About us</li>
               <li className="trigger">Contact us</li>
               <div className="backbutton" onClick={() => setSlideBg(false)} >

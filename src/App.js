@@ -24,6 +24,8 @@ function App() {
   const [ slideBg, setSlideBg] = useState(false)
   const [ navHandleColor, setNavHandleColor] = useState("black")
   const [ cardBtn, setCardBtn] = useState(false)
+  const [individualSlide, setIndividualSlide] = useState(false);
+
   
   const dynamicCursor = e => (
     setCursor({x:e.clientX, y:e.clientY, pageX:e.pageX})
@@ -43,13 +45,25 @@ useEffect( () => {
       <Navbar navHandleColor={navHandleColor} setNavHandleColor={setNavHandleColor} setSlideBg={setSlideBg}/>
       <Switch>
         <Route exact path="/">
-          <Home slideBg={slideBg} setSlideBg={setSlideBg} setNavHandleColor={setNavHandleColor} setCursorClass={setCursorClass} />
+          <Home slideBg={slideBg} setSlideBg={setSlideBg} setNavHandleColor={setNavHandleColor} setCursorClass={setCursorClass} individualSlide={individualSlide} setIndividualSlide={setIndividualSlide} />
         </Route>
         <Route path="/special">
           <Card setCardBtn={setCardBtn} />
         </Route>
         <Route path="/work">
-          <Slide cardBtn={cardBtn} />
+          <Slide cardBtn={cardBtn} setSlideBg={setSlideBg}  setNavHandleColor={setNavHandleColor} setIndividualSlide={setIndividualSlide}/>
+        </Route>
+        <Route path="/my-protein">
+          <Slide cardBtn={cardBtn} setSlideBg={setSlideBg}  setNavHandleColor={setNavHandleColor} setIndividualSlide={setIndividualSlide}/>
+        </Route>
+        <Route path="/nike-air-max">
+          <Slide cardBtn={cardBtn} setSlideBg={setSlideBg}  setNavHandleColor={setNavHandleColor} setIndividualSlide={setIndividualSlide}/>
+        </Route>
+        <Route path="/apple">
+          <Slide cardBtn={cardBtn} setSlideBg={setSlideBg}  setNavHandleColor={setNavHandleColor} setIndividualSlide={setIndividualSlide}/>
+        </Route>
+        <Route path="/jade-teriyaki">
+          <Slide cardBtn={cardBtn} setSlideBg={setSlideBg}  setNavHandleColor={setNavHandleColor} setIndividualSlide={setIndividualSlide}/>
         </Route>
       </Switch>
       

@@ -3,6 +3,7 @@ import "./Slide.scss";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import Card from "../Card/Card";
 import playBtn from "../../../../images/google-play-button.png";
+import MenuBottom from "../MenuBottom/MenuBottom";
 
 const Slide = ({
   slideItem,
@@ -13,9 +14,14 @@ const Slide = ({
 }) => {
   // console.log(slideItem);
 
+  setTimeout(() => {
+    setIndividualSlide(false);
+  }, 500)
+
+
   return (
     <div className="individual__slide__container">
-      <div id="individualSlide" className="individualSlide" style={{zIndex:cardBtn?"-1":"1"}}>
+      <div id="individualSlide" className="individualSlide" style={{zIndex:cardBtn?"-1":"-1"}}>
         {/* {
       slideItem.id === 1 || slideItem.id === 2 ? (
         <>
@@ -114,7 +120,9 @@ const Slide = ({
               <li>Nisi ipsa quas ipsum itaque saepe, id porro illum aperiam, dolorum maxime fuga. Provident expedita modi </li>
               <li>Consectetur repellat sequi quis commodi, veritatis quos eos qui, necessitatibus sapiente repellendus, </li>
             </ul>
+            
           </div>
+          <MenuBottom/>
         </div>
       </div>
 
@@ -129,7 +137,10 @@ const Slide = ({
       >
         <ArrowBackIcon />
       </div>
-
+      
+      <div className="slider-bottom-menu">
+        
+      </div>
       
 
     </div>

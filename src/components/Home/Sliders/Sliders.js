@@ -9,10 +9,11 @@ import "swiper/swiper-bundle.css";
 
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import Navbar from "../Navbar/Navbar";
+import MenuBottom from "./MenuBottom/MenuBottom";
 
 
 
-const Sliders = ({setNavHandleColor, slideBg, setSlideBg, setCursorClass}) => {
+const Sliders = ({setNavHandleColor, slideBg, setSlideBg, setCursorClass, individualSlide, setIndividualSlide}) => {
 
   const works = worksData.works;
    const [isRotate, setIsRotate] = useState({})
@@ -58,7 +59,7 @@ const Sliders = ({setNavHandleColor, slideBg, setSlideBg, setCursorClass}) => {
  
   const [dragging, setDragging] = useState(false)
 
-  const [individualSlide, setIndividualSlide] = useState(false);
+  // const [individualSlide, setIndividualSlide] = useState(false);
   const [slideItem, setSlideItem] = useState({})
 
   // const [ slideBg, setSlideBg] = useState(false)
@@ -140,7 +141,7 @@ const Sliders = ({setNavHandleColor, slideBg, setSlideBg, setCursorClass}) => {
           {/*  */}
           
           {works.map((work) => (
-            <SwiperSlide key={`slider-${work.id}`} style={{transform:`rotateY(${individualSlide?"":rotate}deg)  `}} onMouseEnter={() => hadleCursor()} onMouseLeave={() => setCursorClass('')} >
+            <SwiperSlide key={`slider-${work.id}`} style={{transform:`rotateY(${individualSlide?"":rotate}deg) `, display: slideBg?"none":"initial"}} onMouseEnter={() => hadleCursor()} onMouseLeave={() => setCursorClass('')} >
               
               <div id="slide" className="slide"   >
                 <div className="title">
@@ -164,6 +165,11 @@ const Sliders = ({setNavHandleColor, slideBg, setSlideBg, setCursorClass}) => {
             </SwiperSlide>
           ))}
         </Swiper>
+
+          <div style={{display: slideBg?"none":"initial"}} >
+            <MenuBottom />
+          </div>
+        
         
       </div>
       

@@ -7,7 +7,7 @@
 
   .back__button{
     position: absolute;
-    bottom: 80px;
+    bottom: 100px;
     left: 5%;
     z-index: 999 !important;
   
@@ -80,7 +80,7 @@
 
     .google-play-button{
       position: absolute;
-      bottom: 70px;
+      bottom: 100px;
       left: 50%;
       transform: translateX(-50%)
     }
@@ -96,10 +96,27 @@
     //   grid-template-columns: repeat(1, auto);
     // }
 
+    .features-container{
+      .menu-bottom{
+        position: absolute !important;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1200px !important;
+        bottom: 20px !important;
+        display: flex !important;
+        justify-content: space-evenly;
+        max-width: 1200px;
+        list-style: none;
+        margin: 0px auto 0 auto ;
+        font-family: 'Hurme';
+
+    }
+    }
+
     .features{
       position: absolute;
       width: 500px !important;
-      bottom: 150px;
+      bottom: 200px;
       left: 30%;
       transform: translateX(-50%);
       z-index: 999 !important;
@@ -111,13 +128,28 @@
     .features-right{
       position: absolute;
       width: 500px !important;
-      bottom: 150px;
+      bottom: 200px;
       right: -7% !important;
       transform: translateX(-50%);
       color: black !important;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Fira Sans", "Helvetica Neue", sans-serif;
       text-align: left;
     }
+
+
+
+    .slider-bottom-menu{
+
+      
+        transform: translateX(-50%);
+        color: black !important;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Fira Sans", "Helvetica Neue", sans-serif;
+       
+
+      
+    }
+
+    
 
 }
 

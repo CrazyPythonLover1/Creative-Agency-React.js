@@ -167,7 +167,7 @@ const Sliders = ({setNavHandleColor, slideBg, setSlideBg, setCursorClass, indivi
         </Swiper>
 
           <div style={{display: slideBg?"none":"initial"}} >
-            <MenuBottom />
+            {/* <MenuBottom /> */}
           </div>
         
         

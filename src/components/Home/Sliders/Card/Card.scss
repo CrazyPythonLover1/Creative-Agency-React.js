@@ -1,15 +1,4 @@
-// @import "compass/css3";
 
-// @import "compass/css3";
-// @import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
-
-// html {
-//   box-sizing: border-box;
-//   height: 100%;
-// }
-// *, *:before, *:after {
-//   box-sizing: inherit;
-// }
 .card{
   background-color: #ffdc25;
   background-repeat: no-repeat;
@@ -68,12 +57,7 @@
     }
     
     @media screen and (min-width: 1120px) {
-      // & {
-      //    width: 20%;
-      // }
-      // &:nth-child(odd), &:nth-child(3n+1) {
-      //    clear: none;
-      // }    
+        
       
     }
     
@@ -165,12 +149,7 @@
 
 
 @media screen and (min-width: 1120px) {
-  // & {
-  //    width: 20%;
-  // }
-  // &:nth-child(odd), &:nth-child(3n+1) {
-  //    clear: none;
-  // }    
+    
   .card-container {
     display: flex;
   }

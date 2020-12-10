@@ -1,6 +1,5 @@
 .list{
 
-    &::after{
         display: block;
         content: '';
         width: 1.4rem !important;
@@ -8,11 +7,53 @@
         position: relative;
         left: 50%;
         transform: translateX(-50%);
-        top: 5px;
+        top: 0px;
         border: 2px solid white ;
         border-radius: 50%;
-    }
+        transition: width 0.4s ease 0.2s, height 0.4s ease 0.2s ;
+
+
+        &::after{
+            display: block;
+            content: '';
+            width: .9rem !important;
+            height: .9rem !important;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 2.2px;
+            border: 3px solid transparent;
+            border-radius: 50%;
+            background: white;
+            transition: transform 0.3s;
+            transform: translateX(-50%) scale(0);
+    
+        }
+
+        &:hover::after{
+            transform: translateX(-50%) scale(1);
+        }
+
+    
 }
+
+
+// .hoverActive {
+//     &::after{
+//         display: block;
+//         content: '';
+//         width: .9rem !important;
+//         height: .9rem !important;
+//         position: relative;
+//         left: 50%;
+//         transform: translateX(-50%);
+//         top: -18.5px;
+//         border: 2px solid transparent;
+//         border-radius: 50%;
+//         background: white;
+
+//     }
+// }
 
 
 .selected{
@@ -25,7 +66,7 @@
         position: relative;
         left: 50%;
         transform: translateX(-50%);
-        top: -13.5px;
+        top: -18.5px;
         border: 2px solid transparent;
         border-radius: 50%;
         background: white;

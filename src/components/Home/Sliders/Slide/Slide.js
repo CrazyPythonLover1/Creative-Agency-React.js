@@ -137,10 +137,7 @@ const Slide = ({
       >
         <ArrowBackIcon />
       </div>
-      
-      <div className="slider-bottom-menu">
-        
-      </div>
+    
       
 
     </div>

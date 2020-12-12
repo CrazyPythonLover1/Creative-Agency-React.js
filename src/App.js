@@ -68,11 +68,10 @@ useEffect( () => {
       </Switch>
       
       <div className={` cursor`}  >
-        <div className={cursorClass?'':"dynamicCursor"} style={{position:"fixed", transform: `translateX(calc(${cursor.x}px - 50%)) translateY(calc(${cursor.y}px - 50%))`, opacity:!cursorClass?1:0 }} ></div>
-        <div className="cursor-slide" style={{position:"fixed", transform: `translateX(calc(${cursor.x}px - 50%)) translateY(calc(${cursor.y}px - 50%))`, opacity:cursorClass?1:0 }}>
-            {/* <NavigateBeforeIcon className={` before `}  ></NavigateBeforeIcon><span className="line">-</span><NavigateNextIcon className={` next `} ></NavigateNextIcon> */}
+        <div className={"dynamicCursor"} style={{position:"fixed", transform: `translateX(calc(${cursor.x}px - 50%)) translateY(calc(${cursor.y}px - 50%))`, width: cursorClass?"40px":"18px", height: cursorClass?"40px":"18px",  }} > <span style={{opacity:cursorClass?1:0}} className="cursorIcon"> <SettingsEthernetIcon/> </span> </div>
+        {/* <div className="cursor-slide" style={{position:"fixed", transform: `translateX(calc(${cursor.x}px - 50%)) translateY(calc(${cursor.y}px - 50%))`, opacity:cursorClass?1:0 }}>
             <span className="cursorIcon"> <SettingsEthernetIcon/> </span>
-        </div>
+        </div> */}
         
       </div>
       

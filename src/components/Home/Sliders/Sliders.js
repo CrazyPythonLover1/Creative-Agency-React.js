@@ -83,7 +83,7 @@ const Sliders = ({setNavHandleColor, slideBg, setSlideBg, setCursorClass, indivi
 
 
   return (
-    <div className={`container  ${individualSlide?"expand":""} `}   >
+    <div className={`container  ${individualSlide?"expand":""} `} onMouseEnter={() => hadleCursor()} onMouseLeave={() => setCursorClass('')}  >
       
     <div id="sliders" className="sliders">
       <div className="inner-slider">
@@ -141,7 +141,7 @@ const Sliders = ({setNavHandleColor, slideBg, setSlideBg, setCursorClass, indivi
           {/*  */}
           
           {works.map((work) => (
-            <SwiperSlide key={`slider-${work.id}`} style={{transform:`rotateY(${individualSlide?"":rotate}deg) `, display: slideBg?"none":"initial"}} onMouseEnter={() => hadleCursor()} onMouseLeave={() => setCursorClass('')} >
+            <SwiperSlide key={`slider-${work.id}`} style={{transform:`rotateY(${individualSlide?"":rotate}deg) `, display: slideBg?"none":"initial"}}  >
               
               <div id="slide" className="slide"   >
                 <div className="title">
@@ -165,7 +165,10 @@ const Sliders = ({setNavHandleColor, slideBg, setSlideBg, setCursorClass, indivi
             </SwiperSlide>
           ))}
         </Swiper>
-
+            <div style={{  margin:" 30px 0",height:" 100% "}}> 
+              <h4 onMouseEnter={() => setCursorClass('')} onMouseLeave={() => hadleCursor()}  style={{padding: "10px 0", textAlign:" center ", }}> Drag throhg our work </h4> 
+            </div>
+            
           <div style={{display: slideBg?"none":"initial"}} >
             {/* <MenuBottom /> */}
           </div>

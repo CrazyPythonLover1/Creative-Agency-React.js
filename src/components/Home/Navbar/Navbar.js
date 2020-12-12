@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.scss";
 
-const Navbar = ({navHandleColor, setSlideBg, setNavHandleColor}) => {
+const Navbar = ({navHandleColor, setSlideBg, setNavHandleColor, setCursorNav}) => {
   const [handleWorkActive, setHandleWorkActive] = useState(true)
   const [handlePricingActive, setHandlePricingActive] = useState(false)
   const handleSlideBg =  () => {
@@ -23,15 +23,27 @@ const Navbar = ({navHandleColor, setSlideBg, setNavHandleColor}) => {
               setNavHandleColor("black")
               setHandlePricingActive(false)
               setHandleWorkActive(true)
-              }}>Our work</li> </Link> 
+              }}
+              onMouseEnter={() => setCursorNav("nav-item")}
+              onMouseLeave={() => setCursorNav("")}
+              >Our work</li> </Link> 
 
                <Link to="/special"> <li className={`${handlePricingActive?'active pricing-active':" " }  trigger`}  onClick={() => {
               setNavHandleColor("black")
               setHandlePricingActive(true)
               setHandleWorkActive(false)
-              }}> <span className="" style={{display:"inline-block"}} >Special <br/> Pricing</span></li>  </Link> 
-              <li className="trigger">About us</li>
-              <li className="trigger">Contact us</li>
+              }}
+              onMouseEnter={() => setCursorNav("nav-item")}
+              onMouseLeave={() => setCursorNav("")}
+              > <span className="" style={{display:"inline-block"}} >Special <br/> Pricing</span></li>  </Link> 
+              <li className="trigger"
+              onMouseEnter={() => setCursorNav("nav-item")}
+              onMouseLeave={() => setCursorNav("")}
+              >About us</li>
+              <li className="trigger"
+              onMouseEnter={() => setCursorNav("nav-item")}
+              onMouseLeave={() => setCursorNav("")}
+              >Contact us</li>
               <div className="backbutton" onClick={() => setSlideBg(false)} >
                
               </div>

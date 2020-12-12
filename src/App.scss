@@ -40,10 +40,10 @@ body{
     }
 
     .cursorIcon{
-        position: relative;
-        top: 30%;
-        left: 31%;
-        transform: translate(-25%, -25%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -40%);
         transition: transform 1.4s cubic-bezier(0.075, 0.82, 0.165, 1) 0s, width 0.4s ease 0.2s, height 0.4s ease 0.2s, opacity .4s ease 0.2s;
         pointer-events: none;
 

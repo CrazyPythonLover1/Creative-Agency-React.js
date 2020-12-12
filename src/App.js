@@ -14,6 +14,7 @@ import {
 import Slide from './components/Home/Sliders/Slide/Slide';
 import Slideer from './components/Home/Sliders/Sliders';
 import Navbar from './components/Home/Navbar/Navbar';
+import AddIcon from '@material-ui/icons/Add';
 
 
 
@@ -21,6 +22,7 @@ import Navbar from './components/Home/Navbar/Navbar';
 function App() {
   const [cursor, setCursor] = useState({x:null, y: null})
   const [cursorClass, setCursorClass] = useState('')
+  const [cursorNav, setCursorNav] = useState("")
   const [ slideBg, setSlideBg] = useState(false)
   const [ navHandleColor, setNavHandleColor] = useState("black")
   const [ cardBtn, setCardBtn] = useState(false)
@@ -42,7 +44,7 @@ useEffect( () => {
   return (
     <Router>
     <div>
-      <Navbar navHandleColor={navHandleColor} setNavHandleColor={setNavHandleColor} setSlideBg={setSlideBg}/>
+      <Navbar navHandleColor={navHandleColor} setNavHandleColor={setNavHandleColor} setSlideBg={setSlideBg} setCursorNav={setCursorNav} />
       <Switch>
         <Route exact path="/">
           <Home slideBg={slideBg} setSlideBg={setSlideBg} setNavHandleColor={setNavHandleColor} setCursorClass={setCursorClass} individualSlide={individualSlide} setIndividualSlide={setIndividualSlide} />
@@ -68,7 +70,7 @@ useEffect( () => {
       </Switch>
       
       <div className={` cursor`}  >
-        <div className={"dynamicCursor"} style={{position:"fixed", transform: `translateX(calc(${cursor.x}px - 50%)) translateY(calc(${cursor.y}px - 50%))`, width: cursorClass?"40px":"18px", height: cursorClass?"40px":"18px",  }} > <span style={{opacity:cursorClass?1:0}} className="cursorIcon"> <SettingsEthernetIcon/> </span> </div>
+        <div className={"dynamicCursor"} style={{position:"fixed", transform: `translateX(calc(${cursor.x}px - 50%)) translateY(calc(${cursor.y}px - 50%))`, width: (cursorClass || cursorNav)?"40px":"18px", height: (cursorClass || cursorNav)?"40px":"18px",  }} > <span style={{opacity:cursorClass?1:0}} className="cursorIcon"> <SettingsEthernetIcon/> </span> <span style={{opacity:cursorNav?1:0}} className="cursorIcon"> <AddIcon/> </span> </div>
         {/* <div className="cursor-slide" style={{position:"fixed", transform: `translateX(calc(${cursor.x}px - 50%)) translateY(calc(${cursor.y}px - 50%))`, opacity:cursorClass?1:0 }}>
             <span className="cursorIcon"> <SettingsEthernetIcon/> </span>
         </div> */}

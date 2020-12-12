@@ -35,6 +35,7 @@ body{
         width: 16px !important;
         height: 16px !important;
         color: white;
+        pointer-events: none;
         
     }
 
@@ -44,6 +45,8 @@ body{
         left: 31%;
         transform: translate(-25%, -25%);
         transition: transform 1.4s cubic-bezier(0.075, 0.82, 0.165, 1) 0s, width 0.4s ease 0.2s, height 0.4s ease 0.2s, opacity .4s ease 0.2s;
+        pointer-events: none;
+
     }
 }
 

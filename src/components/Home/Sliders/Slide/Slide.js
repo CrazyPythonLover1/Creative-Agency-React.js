@@ -4,6 +4,7 @@ import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import Card from "../Card/Card";
 import playBtn from "../../../../images/google-play-button.png";
 import MenuBottom from "../MenuBottom/MenuBottom";
+import { Link } from "react-router-dom";
 
 const Slide = ({
   slideItem,
@@ -135,7 +136,7 @@ const Slide = ({
           setNavHandleColor("black");
         }}
       >
-        <ArrowBackIcon />
+       <Link to="/"> <ArrowBackIcon /> </Link> 
       </div>
     
       

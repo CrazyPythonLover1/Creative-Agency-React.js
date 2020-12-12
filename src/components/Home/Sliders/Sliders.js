@@ -83,7 +83,7 @@ const Sliders = ({setNavHandleColor, slideBg, setSlideBg, setCursorClass, indivi
 
 
   return (
-    <div className={`container  ${individualSlide?"expand":""} `} onMouseEnter={() => hadleCursor()} onMouseLeave={() => setCursorClass('')}  >
+    <div className={`container  ${individualSlide?"expand":""} `} onMouseEnter={() => hadleCursor()} onMouseLeave={() => setCursorClass('')} style={{height: slideBg?0:'90vh'}}  >
       
     <div id="sliders" className="sliders">
       <div className="inner-slider">
@@ -154,7 +154,10 @@ const Sliders = ({setNavHandleColor, slideBg, setSlideBg, setCursorClass, indivi
                   <div className="overlay" style={{opacity:activeSlide?1:0 }} >
                     <div className="category"> {work.category} </div>
                     <div className="title"> {work.productTitle} </div>
-                    <div className="slider-button" onClick={() => handleBtn(work)}> <span>View case study</span> <ArrowForwardIcon/>
+                    <div className="slider-button" onClick={() => {
+                      handleBtn(work)
+                      setCursorClass('')
+                      }} > <span>View case study</span> <ArrowForwardIcon/>
                    
                     </div>
                   </div>
@@ -165,9 +168,9 @@ const Sliders = ({setNavHandleColor, slideBg, setSlideBg, setCursorClass, indivi
             </SwiperSlide>
           ))}
         </Swiper>
-            <div style={{  margin:" 30px 0",height:" 100% "}}> 
+            { !slideBg &&  <div style={{  margin:" 30px 0",height:" 100% "}}> 
               <h4 onMouseEnter={() => setCursorClass('')} onMouseLeave={() => hadleCursor()}  style={{padding: "10px 0", textAlign:" center ", }}> Drag through our work </h4> 
-            </div>
+            </div>}
             
           <div style={{display: slideBg?"none":"initial"}} >
             {/* <MenuBottom /> */}

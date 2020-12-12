@@ -11,7 +11,7 @@ const Slide = ({
   setSlideBg,
   setIndividualSlide,
   setNavHandleColor,
-  cardBtn
+  cardBtn,
 }) => {
   // console.log(slideItem);
 
@@ -123,7 +123,7 @@ const Slide = ({
             </ul>
             
           </div>
-          <MenuBottom/>
+          <MenuBottom  />
         </div>
       </div>
 

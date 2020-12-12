@@ -1,17 +1,26 @@
 .footer-section{
-    
+    z-index: 999;
     .menu-bottom{
         position: absolute !important;
         left: 50%;
         transform: translateX(-50%);
         width: 1200px !important;
-        bottom: 70px !important;
+        bottom: 60px !important;
         display: flex !important;
         justify-content: space-evenly;
         max-width: 1200px;
         list-style: none;
         margin: 0px auto 0 auto ;
         font-family: 'Hurme';
+
+        li{
+            padding: 10px 0;
+        }
+        li{
+            &:hover{
+                color: white;
+            }
+        }
 
     }
    
@@ -28,6 +37,7 @@
 
         li{
             margin: 0 6px;
+            
         }
     }
     

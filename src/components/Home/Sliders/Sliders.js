@@ -13,7 +13,7 @@ import MenuBottom from "./MenuBottom/MenuBottom";
 
 
 
-const Sliders = ({setNavHandleColor, slideBg, setSlideBg, setCursorClass, individualSlide, setIndividualSlide}) => {
+const Sliders = ({setNavHandleColor, slideBg, setSlideBg, setCursorClass, individualSlide, setIndividualSlide, slideItem, setSlideItem}) => {
 
   const works = worksData.works;
    const [isRotate, setIsRotate] = useState({})
@@ -60,7 +60,7 @@ const Sliders = ({setNavHandleColor, slideBg, setSlideBg, setCursorClass, indivi
   const [dragging, setDragging] = useState(false)
 
   // const [individualSlide, setIndividualSlide] = useState(false);
-  const [slideItem, setSlideItem] = useState({})
+  // const [slideItem, setSlideItem] = useState({})
 
   // const [ slideBg, setSlideBg] = useState(false)
 
@@ -181,7 +181,7 @@ const Sliders = ({setNavHandleColor, slideBg, setSlideBg, setCursorClass, indivi
       
     </div>
 
-{ slideBg &&   <div>  <Slide slideItem={slideItem} setSlideBg={setSlideBg} setIndividualSlide={setIndividualSlide} setNavHandleColor={setNavHandleColor} />  </div> }
+{ slideBg &&   <div>  <Slide slideItem={slideItem} setSlideItem={setSlideItem}  setSlideBg={setSlideBg} setIndividualSlide={setIndividualSlide} setNavHandleColor={setNavHandleColor} />  </div> }
     </div>
   );
 };

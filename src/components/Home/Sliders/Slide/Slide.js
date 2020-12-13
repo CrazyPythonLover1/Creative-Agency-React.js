@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 
 const Slide = ({
   slideItem,
+  setSlideItem,
   setSlideBg,
   setIndividualSlide,
   setNavHandleColor,
@@ -123,7 +124,7 @@ const Slide = ({
             </ul>
             
           </div>
-          <MenuBottom  />
+          <MenuBottom slideItem={slideItem} setSlideItem={setSlideItem} />
         </div>
       </div>
 

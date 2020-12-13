@@ -14,13 +14,20 @@
         font-family: 'Hurme';
         z-index: 9999;
         li{
-            padding: 10px 0;
             color: white;
         }
         li{
             &:hover{
                 color: white;
             }
+        }
+
+        .selected-menu{
+            border-bottom: 2px solid white;
+        }
+
+        .menu-active{
+            border-bottom: 2px solid white;
         }
 
     }

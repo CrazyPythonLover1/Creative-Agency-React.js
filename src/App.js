@@ -23,6 +23,7 @@ function App() {
   const [cursor, setCursor] = useState({x:null, y: null})
   const [cursorClass, setCursorClass] = useState('')
   const [cursorNav, setCursorNav] = useState("")
+  const [slideItem, setSlideItem] = useState({})
   const [ slideBg, setSlideBg] = useState(false)
   const [ navHandleColor, setNavHandleColor] = useState("black")
   const [ cardBtn, setCardBtn] = useState(false)
@@ -47,25 +48,25 @@ useEffect( () => {
       <Navbar navHandleColor={navHandleColor} setNavHandleColor={setNavHandleColor} setSlideBg={setSlideBg} setCursorNav={setCursorNav} />
       <Switch>
         <Route exact path="/">
-          <Home slideBg={slideBg} setSlideBg={setSlideBg} setNavHandleColor={setNavHandleColor} setCursorClass={setCursorClass} individualSlide={individualSlide} setIndividualSlide={setIndividualSlide} />
+          <Home slideBg={slideBg} setSlideBg={setSlideBg} setNavHandleColor={setNavHandleColor} setCursorClass={setCursorClass} individualSlide={individualSlide} setIndividualSlide={setIndividualSlide} slideItem={slideItem} setSlideItem={setSlideItem} />
         </Route>
         <Route path="/special">
           <Card setCardBtn={setCardBtn} />
         </Route>
         <Route path="/work">
-          <Slide cardBtn={cardBtn} setSlideBg={setSlideBg}  setNavHandleColor={setNavHandleColor} setIndividualSlide={setIndividualSlide}/>
+          <Slide cardBtn={cardBtn} setSlideBg={setSlideBg}  setNavHandleColor={setNavHandleColor} setIndividualSlide={setIndividualSlide} slideItem={slideItem} setSlideItem={setSlideItem} />
         </Route>
         <Route path="/my-protein">
-          <Slide cardBtn={cardBtn} setSlideBg={setSlideBg}  setNavHandleColor={setNavHandleColor} setIndividualSlide={setIndividualSlide} />
+          <Slide cardBtn={cardBtn} setSlideBg={setSlideBg}  setNavHandleColor={setNavHandleColor} setIndividualSlide={setIndividualSlide} slideItem={slideItem} setSlideItem={setSlideItem} />
         </Route>
         <Route path="/nike-air-max">
-          <Slide cardBtn={cardBtn} setSlideBg={setSlideBg}  setNavHandleColor={setNavHandleColor} setIndividualSlide={setIndividualSlide}/>
+          <Slide cardBtn={cardBtn} setSlideBg={setSlideBg}  setNavHandleColor={setNavHandleColor} setIndividualSlide={setIndividualSlide} slideItem={slideItem} setSlideItem={setSlideItem} />
         </Route>
         <Route path="/apple">
-          <Slide cardBtn={cardBtn} setSlideBg={setSlideBg}  setNavHandleColor={setNavHandleColor} setIndividualSlide={setIndividualSlide}/>
+          <Slide cardBtn={cardBtn} setSlideBg={setSlideBg}  setNavHandleColor={setNavHandleColor} setIndividualSlide={setIndividualSlide} slideItem={slideItem} setSlideItem={setSlideItem} />
         </Route>
         <Route path="/jade-teriyaki">
-          <Slide cardBtn={cardBtn} setSlideBg={setSlideBg}  setNavHandleColor={setNavHandleColor} setIndividualSlide={setIndividualSlide}/>
+          <Slide cardBtn={cardBtn} setSlideBg={setSlideBg}  setNavHandleColor={setNavHandleColor} setIndividualSlide={setIndividualSlide} slideItem={slideItem} setSlideItem={setSlideItem} />
         </Route>
       </Switch>
       

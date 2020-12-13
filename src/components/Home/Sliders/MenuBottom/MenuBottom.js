@@ -1,15 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './MenuBottom.scss';
 
 const MenuBottom = ({slideItem, setSlideItem}) => {
-    console.log(slideItem.id)
-    // const [spanHover, setSpanHover] = useState(false)
-    const currentURL = window.location.href 
-    console.log(currentURL)
-
-const pathname = window.location.pathname 
-console.log(pathname)
+    
     return (
         <div className="footer-section">
             <ul className="menu-bottom">

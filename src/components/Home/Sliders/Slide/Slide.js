@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./Slide.scss";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
-import Card from "../Card/Card";
 import playBtn from "../../../../images/google-play-button.png";
 import MenuBottom from "../MenuBottom/MenuBottom";
 import { Link } from "react-router-dom";
@@ -27,65 +26,65 @@ const Slide = ({
         {/* {
       slideItem.id === 1 || slideItem.id === 2 ? (
         <>
-        <h1 class="hero__title">
+        <h1 className="hero__title">
         UX works for
-        <div class="dropping-texts">
+        <div className="dropping-texts">
           <div>Developers</div>
           <div>Designers</div>
           <div>Coders</div>
           <div>EVERYONE!</div>
         </div>
       </h1>
-        <header class="hero hero--map gps-bg">
-          <div class="gps-bg__guts">
-            <div class="gps-bg__bg"></div>
-            <div class="gps-bg__route"></div>
-            <div class="gps-bg__marker"></div>
+        <header className="hero hero--map gps-bg">
+          <div className="gps-bg__guts">
+            <div className="gps-bg__bg"></div>
+            <div className="gps-bg__route"></div>
+            <div className="gps-bg__marker"></div>
           </div>
-          <div class="gps-bg__fade"></div>
+          <div className="gps-bg__fade"></div>
         </header>
         </>
       ) : ( */}
         <>
           <div className="loader-bg">
-            <div class="container-slide">
-              <div class="spinner">
-                <div class="spinner-item"></div>
-                <div class="spinner-item"></div>
-                <div class="spinner-item"></div>
-                <div class="spinner-item"></div>
-                <div class="spinner-item"></div>
+            <div className="container-slide">
+              <div className="spinner">
+                <div className="spinner-item"></div>
+                <div className="spinner-item"></div>
+                <div className="spinner-item"></div>
+                <div className="spinner-item"></div>
+                <div className="spinner-item"></div>
               </div>
 
-              <div class="spinner">
-                <div class="spinner-item"></div>
-                <div class="spinner-item"></div>
-                <div class="spinner-item"></div>
+              <div className="spinner">
+                <div className="spinner-item"></div>
+                <div className="spinner-item"></div>
+                <div className="spinner-item"></div>
               </div>
 
-              <div class="spinner">
-                <div class="spinner-item"></div>
-                <div class="spinner-item"></div>
-                <div class="spinner-item"></div>
+              <div className="spinner">
+                <div className="spinner-item"></div>
+                <div className="spinner-item"></div>
+                <div className="spinner-item"></div>
               </div>
 
-              <div class="spinner">
-                <div class="spinner-item"></div>
-                <div class="spinner-item"></div>
-                <div class="spinner-item"></div>
+              <div className="spinner">
+                <div className="spinner-item"></div>
+                <div className="spinner-item"></div>
+                <div className="spinner-item"></div>
               </div>
 
-              <div class="spinner">
-                <div class="spinner-item"></div>
-                <div class="spinner-item"></div>
-                <div class="spinner-item"></div>
-                <div class="spinner-item"></div>
-                <div class="spinner-item"></div>
+              <div className="spinner">
+                <div className="spinner-item"></div>
+                <div className="spinner-item"></div>
+                <div className="spinner-item"></div>
+                <div className="spinner-item"></div>
+                <div className="spinner-item"></div>
               </div>
 
-              <div class="spinner">
-                <div class="spinner-item"></div>
-                <div class="spinner-item"></div>
+              <div className="spinner">
+                <div className="spinner-item"></div>
+                <div className="spinner-item"></div>
               </div>
             </div>
           </div>
@@ -93,9 +92,9 @@ const Slide = ({
 
         {/* )} */}
 
-        <h1 class="hero__title">
+        <h1 className="hero__title">
           <span style={{ fontWeight: "100" }}> UX works for </span>
-          <div class="dropping-texts">
+          <div className="dropping-texts">
             <div>Developers</div>
             <div>Designers</div>
             <div>Coders</div>

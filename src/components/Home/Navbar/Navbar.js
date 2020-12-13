@@ -5,16 +5,14 @@ import "./Navbar.scss";
 const Navbar = ({navHandleColor, setSlideBg, setNavHandleColor, setCursorNav}) => {
   const [handleWorkActive, setHandleWorkActive] = useState(true)
   const [handlePricingActive, setHandlePricingActive] = useState(false)
-  const handleSlideBg =  () => {
-    setSlideBg(false);
-  }
+  
   return (
     <div>
       <div className="page_portfolio" >
         <div className="portfolio_home__header">
           <div className="logoMain">
-            { navHandleColor==="black"? <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/cagencylogo.png" />:
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/slogowhite.png"/>}
+            { navHandleColor==="black"? <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/cagencylogo.png" alt=" logo " />:
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/slogowhite.png" alt=" logo"/>}
           </div>
           <div className="nav">
             <ul className={navHandleColor}>

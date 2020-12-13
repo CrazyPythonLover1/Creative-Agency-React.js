@@ -8,8 +8,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
-import Navbar from "../Navbar/Navbar";
-import MenuBottom from "./MenuBottom/MenuBottom";
 
 
 

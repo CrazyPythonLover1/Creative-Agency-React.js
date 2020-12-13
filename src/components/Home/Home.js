@@ -1,15 +1,9 @@
-import React, { useState } from 'react';
-import Navbar from './Navbar/Navbar';
+import React from 'react';
 import Sliders from './Sliders/Sliders';
-import Card from './Sliders/Card/Card'
 
 const Home = ({slideBg, setSlideBg, setNavHandleColor, setCursorClass, individualSlide, setIndividualSlide, slideItem, setSlideItem }) => {
     
-    
 
-    const handleColor = () => {
-
-    }
 
     return (
         <div>

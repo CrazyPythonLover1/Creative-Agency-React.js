@@ -70,10 +70,9 @@ useEffect( () => {
       </Switch>
       
       <div className={` cursor`}  >
-        <div className={"dynamicCursor"} style={{ position:"fixed", transform: `translateX(calc(${cursor.x}px - 50%)) translateY(calc(${cursor.y}px - 50%))`, width: (cursorClass || cursorNav)?"40px":"18px", height: (cursorClass || cursorNav)?"40px":"18px",  }} > <span style={{opacity:cursorClass?1:0}} className="cursorIcon"> <SettingsEthernetIcon/> </span> <span style={{opacity:cursorNav?1:0}} className="cursorIcon"> <AddIcon/> </span> </div>
-        {/* <div className="cursor-slide" style={{position:"fixed", transform: `translateX(calc(${cursor.x}px - 50%)) translateY(calc(${cursor.y}px - 50%))`, opacity:cursorClass?1:0 }}>
-            <span className="cursorIcon"> <SettingsEthernetIcon/> </span>
-        </div> */}
+        <div className={"dynamicCursor"} style={{display: slideBg?"none":"block", position:"fixed", transform: `translateX(calc(${cursor.x}px - 50%)) translateY(calc(${cursor.y}px - 50%))`, width: (cursorClass || cursorNav)?"40px":"18px", height: (cursorClass || cursorNav)?"40px":"18px",  }} > <span style={{opacity:cursorClass?1:0}} className="cursorIcon"> <SettingsEthernetIcon/> </span> <span style={{opacity:cursorNav?1:0}} className="cursorIcon"> <AddIcon/> </span> </div>
+        <div className={"dynamicCursor"} style={{ display: slideBg?"block":"none", position:"fixed", transform: `translateX(calc(${cursor.x}px - 50%)) translateY(calc(${cursor.y}px - 50%))`, width: "18px", height: "18px",  }} >  <span style={{opacity:cursorNav?1:0}} className="cursorIcon">  </span> </div>
+       
         
       </div>
       

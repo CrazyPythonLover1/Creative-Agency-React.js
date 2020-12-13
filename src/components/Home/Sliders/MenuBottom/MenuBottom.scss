@@ -12,9 +12,10 @@
         list-style: none;
         margin: 0px auto 0 auto ;
         font-family: 'Hurme';
-
+        z-index: 9999;
         li{
             padding: 10px 0;
+            color: white;
         }
         li{
             &:hover{
@@ -34,6 +35,7 @@
         bottom: 20px;
         left: 50%;
         transform: translateX(-50%);
+        z-index: 9999;
 
         li{
             margin: 0 6px;

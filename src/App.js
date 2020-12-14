@@ -12,6 +12,9 @@ import Slide from './components/Home/Sliders/Slide/Slide';
 import Navbar from './components/Home/Navbar/Navbar';
 import AddIcon from '@material-ui/icons/Add';
 
+import React from 'react'
+import {NotificationsProvider} from 'reapop'
+
 
 
 
@@ -39,6 +42,7 @@ useEffect( () => {
 
 
   return (
+    <NotificationsProvider> 
     <Router>
     <div>
       <Navbar navHandleColor={navHandleColor} setNavHandleColor={setNavHandleColor} setSlideBg={setSlideBg} setCursorNav={setCursorNav} />
@@ -79,7 +83,7 @@ useEffect( () => {
       </div> */}
     </div>
     </Router>
-    
+    </NotificationsProvider>
     
   );
 }

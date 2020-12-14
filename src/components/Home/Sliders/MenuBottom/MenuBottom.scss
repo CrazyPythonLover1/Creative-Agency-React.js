@@ -1,3 +1,5 @@
+@import '../../../styles/variables';
+
 .footer-section{
     z-index: 999;
     .menu-bottom{
@@ -5,29 +7,38 @@
         left: 50%;
         transform: translateX(-50%);
         width: 1200px !important;
-        bottom: 60px !important;
+        bottom: 70px !important;
         display: flex !important;
-        justify-content: space-evenly;
+        justify-content: center;
         max-width: 1200px;
         list-style: none;
         margin: 0px auto 0 auto ;
         font-family: 'Hurme';
         z-index: 9999;
+        .menu-item{
+            margin: 0 20px;
+        }
         li{
             color: white;
         }
-        li{
-            &:hover{
-                color: white;
-            }
-        }
+        
 
         .selected-menu{
-            border-bottom: 2px solid white;
+            li{
+                color: $yellow ;
+                font-size: 20px;
+                line-height: 1.5;
+            }
+            border-bottom: 2px solid $yellow;
         }
 
         .menu-active{
-            border-bottom: 2px solid white;
+            li{
+                color: $yellow ;
+                font-size: 20px;
+                line-height: 1.5;
+            }
+            border-bottom: 2px solid $yellow;
         }
 
     }

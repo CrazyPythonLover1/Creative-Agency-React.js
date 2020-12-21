@@ -265,23 +265,34 @@ body {
   
 
 
-	}
+  }
+  color: #E65F48;
+  color: #E65F48;
+  color: #76BCAD;
+  color: #84719f;
+  color: #d47787;
+  color: #F09551;
+  color: #349AB5;
+  color: #e86042;
+  color: #74bcae;
+  color: #E65F48;
 }
 
 
 
   @keyframes bg {
-    0% {background: #ff0075;}
-    3% {background: #0094ff;}
-    20% {background: #0094ff;}
-    23% {background: #b200ff;}
-    40% {background: #b200ff;}
-    43% {background: #8BC34A;}
-    60% {background: #8BC34A;}
-    63% {background: #F44336;}
-    80% {background: #F44336;}
-    83% {background: #F44336;}
-    100% {background: #F44336;}
+  
+    0% {background: #d47787;}
+    3% {background: #d47787;}
+    20% {background: #d47787;}
+    23% {background: #84719f;}
+    40% {background: #84719f;}
+    43% {background: #74bcae;}
+    60% {background: #74bcae;}
+    63% {background: #d47787;}
+    80% {background: #d47787;}
+    83% {background: #349AB5;}
+    100% {background: #349AB5;}
   }
 
 
@@ -318,14 +329,17 @@ body {
   }
   
 
+  
+
   .loader-bg {
-    animation:bg 5s linear infinite;
+    animation:bg 10s linear infinite;
     position: absolute;
     top: 0;
     height: 100%;
     width: 100%;
     display: grid;
-	  place-items: center;
+    place-items: center;
+    color: #E65F48;
   }
   .container-slide {
     display: grid;
@@ -393,7 +407,7 @@ body {
   }
   
   .spinner:nth-child(2) {
-    --animation-duration: 650ms;
+    --animation-duration: 1000ms;
     position: relative;
     width: var(--size);
     height: var(--size);

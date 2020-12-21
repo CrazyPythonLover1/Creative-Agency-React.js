@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Slide.scss";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import playBtn from "../../../../images/google-play-button.png";
 import MenuBottom from "../MenuBottom/MenuBottom";
 import { Link } from "react-router-dom";
+
 
 const Slide = ({
   slideItem,
@@ -15,6 +16,8 @@ const Slide = ({
 }) => {
   // console.log(slideItem);
 
+    
+  
   setTimeout(() => {
     setIndividualSlide(false);
   }, 500)

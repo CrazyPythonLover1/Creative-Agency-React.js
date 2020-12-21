@@ -11,6 +11,8 @@ import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 
 
 
+
+
 const Sliders = ({setNavHandleColor, slideBg, setSlideBg, setCursorClass, individualSlide, setIndividualSlide, slideItem, setSlideItem}) => {
 
   const works = worksData.works;
